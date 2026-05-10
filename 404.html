@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Irshan Khan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Mono:wght@400&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem;
+    }
+    .not-found-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(6rem, 20vw, 14rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--border);
+      margin-bottom: 1rem;
+    }
+    .not-found-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+    }
+    .not-found-msg {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--muted);
+      max-width: 420px;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+    .not-found-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border: 1px solid var(--ink);
+      transition: background 0.2s, color 0.2s;
+    }
+    .not-found-link:hover { background: var(--ink); color: var(--paper); }
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Irshan Khan</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#innovation">Innovation</a></li>
+      <li><a href="index.html#approach">Approach</a></li>
+    </ul>
+  </nav>
+
+  <div class="not-found">
+    <div class="not-found-num">404</div>
+    <div class="not-found-title">Page Not Found</div>
+    <p class="not-found-msg">This page doesn't exist — but the portfolio does. Head back to see the work.</p>
+    <a href="index.html" class="not-found-link">Back to Portfolio →</a>
+  </div>
+</body>
+</html>
