@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation — Irshan Khan</title>
+<meta name="description" content="34+ patents filed. Mirror Beacon Technology, indoor navigation innovations, AI-driven RFP evaluation, and zero-touch deployment.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.patent-hero {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border); margin-bottom: 1px;
+}
+.patent-counter-cell { background: var(--ink); padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+.patent-big-num { font-family: var(--font-display); font-size: clamp(6rem,12vw,10rem); font-weight: 300; color: var(--accent); line-height: 0.85; }
+.patent-big-label { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,238,0.4); margin-top: 1rem; }
+.patent-statement { background: var(--accent); padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+.patent-statement-text { font-family: var(--font-display); font-size: clamp(1.4rem,2.5vw,2rem); font-weight: 300; line-height: 1.45; color: #fff; font-style: italic; }
+
+.inno-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.inno-card { background: var(--paper); padding: 2.4rem; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background 0.25s; }
+.inno-card:hover { background: #f0ede6; }
+.inno-card-num { font-family: var(--font-display); font-size: 3rem; font-weight: 300; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+.inno-card-title { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.8rem; }
+.inno-card-desc { font-size: 0.9rem; line-height: 1.75; color: #4a4844; flex: 1; }
+
+.process-inno { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.process-cell { background: var(--paper); padding: 3rem; transition: background 0.25s; }
+.process-cell:hover { background: #f0ede6; }
+.process-cell:first-child { border-right: 1px solid var(--border); }
+.process-cell-icon { font-size: 2rem; margin-bottom: 1rem; }
+.process-cell-name { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem; }
+.process-cell-desc { font-size: 0.92rem; line-height: 1.8; color: #4a4844; }
+
+@media (max-width: 768px) { .patent-hero { grid-template-columns: 1fr; } .inno-grid { grid-template-columns: 1fr; } .process-inno { grid-template-columns: 1fr; } .process-cell:first-child { border-right: none; border-bottom: 1px solid var(--border); } }
+</style>
+</head>
+<body class="page-wrap">
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">Irshan<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-menu">
+    <a href="../index.html">Home</a><a href="products.html">Products</a><a href="services.html">Services</a><a href="innovation.html" class="active">Innovation</a><a href="casestudy.html">Case Study</a><a href="about.html">About</a><a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Innovation</p>
+    <h1 class="page-hero-title">Patents &amp; <em>Inventions</em></h1>
+    <p class="page-hero-desc">34+ patents filed across indoor positioning, navigation algorithms, and intelligent location technologies — including the breakthrough Mirror Beacon Technology.</p>
+  </div>
+</div>
+
+<!-- PATENT COUNTER -->
+<div class="section">
+  <div class="patent-hero reveal">
+    <div class="patent-counter-cell">
+      <div class="patent-big-num">34<span style="font-size:0.4em; color:var(--accent-lt);">+</span></div>
+      <div class="patent-big-label">Patents Filed</div>
+      <p style="font-family:var(--font-display);font-size:1rem;font-style:italic;color:rgba(245,243,238,0.55);line-height:1.7;margin-top:1.5rem;max-width:360px;">Spanning indoor navigation, positioning algorithms, map data structures, and intelligent location systems — across mobile, automotive, and enterprise applications.</p>
+    </div>
+    <div class="patent-statement">
+      <p class="patent-statement-text">"The best technology solutions emerge when deep user empathy meets relentless curiosity about what's technically possible."</p>
+      <div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-top:1.5rem;display:flex;align-items:center;gap:0.6rem;">
+        <span style="display:block;width:20px;height:1px;background:rgba(255,255,255,0.4);"></span>Guiding invention philosophy
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INNOVATION AREAS -->
+<div class="section" style="padding-top:0;">
+  <div class="sec-head reveal"><span class="sec-num">Core Areas</span><h2 class="sec-title">Innovation <em>Portfolio</em></h2><div class="sec-rule"></div></div>
+
+  <div class="inno-grid reveal" data-stagger>
+    <div class="inno-card">
+      <div class="inno-card-num">01</div>
+      <div class="inno-card-title">Mirror Beacon Technology</div>
+      <p class="inno-card-desc">Breakthrough approach using existing BLE and Wi-Fi infrastructure to create virtual beacon networks — eliminating dedicated hardware while achieving high-accuracy indoor positioning. Enables scalable, cost-effective deployment across any building type.</p>
+    </div>
+    <div class="inno-card">
+      <div class="inno-card-num">02</div>
+      <div class="inno-card-title">Offline Positioning Algorithms</div>
+      <p class="inno-card-desc">Novel compression and quality monitoring techniques enabling precise indoor navigation on low-memory devices without server connectivity. Supports wearables, IoT sensors, and offline-first mobile applications in restricted network environments.</p>
+    </div>
+    <div class="inno-card">
+      <div class="inno-card-num">03</div>
+      <div class="inno-card-title">Multi-Floor Alignment</div>
+      <p class="inno-card-desc">Patented methods for accurate vertical positioning and floor transition detection in multi-storey structures. Resolves the fundamental challenge of Z-axis navigation in complex venues such as hospitals, airports, and shopping centres.</p>
+    </div>
+    <div class="inno-card">
+      <div class="inno-card-num">04</div>
+      <div class="inno-card-title">Radio Map Data Structures</div>
+      <p class="inno-card-desc">Efficient storage and retrieval architectures for large-scale indoor radio fingerprint databases. Enables fast, accurate positioning queries at scale while minimising bandwidth and storage footprint on device and server.</p>
+    </div>
+    <div class="inno-card">
+      <div class="inno-card-num">05</div>
+      <div class="inno-card-title">Visual Positioning Systems</div>
+      <p class="inno-card-desc">Camera-based indoor localisation using computer vision and machine learning — delivering precise positioning without dedicated sensors. Designed for automotive companion apps and large-venue navigation without infrastructure investment.</p>
+    </div>
+    <div class="inno-card">
+      <div class="inno-card-num">06</div>
+      <div class="inno-card-title">Geofence Trigger Logic</div>
+      <p class="inno-card-desc">Intelligent, low-power geofence detection algorithms that minimise battery drain while maintaining real-time responsiveness. Applicable to industrial safety zones, marketing activation, access control, and consumer location services.</p>
+    </div>
+  </div>
+</div>
+
+<!-- APPLICATIONS -->
+<div class="section-full" style="background: var(--ink); padding: var(--pad-sect) var(--pad-x);">
+  <div style="max-width: var(--max-w); margin: 0 auto;">
+    <div class="sec-head dark reveal">
+      <span class="sec-num">Impact</span>
+      <h2 class="sec-title" style="color:var(--paper);">Broad <em style="color:var(--accent-lt);">Applications</em></h2>
+      <div class="sec-rule" style="background:var(--border-dark);"></div>
+    </div>
+    <div class="stats-row stats-row-4 reveal" data-stagger>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num">Healthcare</div><div class="stat-label">Asset tracking &amp; wayfinding in hospitals</div></div>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num">Logistics</div><div class="stat-label">Warehouse navigation &amp; goods tracking</div></div>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num">Automotive</div><div class="stat-label">Parking garage navigation &amp; AVP</div></div>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num">Retail</div><div class="stat-label">Shopper navigation &amp; proximity marketing</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS INNOVATION -->
+<div class="section">
+  <div class="sec-head reveal"><span class="sec-num">Process</span><h2 class="sec-title">Process <em>Innovation</em></h2><div class="sec-rule"></div></div>
+  <div class="process-inno reveal">
+    <div class="process-cell">
+      <div class="process-cell-icon">🤖</div>
+      <div class="process-cell-name">AI-Driven RFP Evaluation</div>
+      <p class="process-cell-desc">Developed an LLM-powered assessment pipeline integrating product documentation and 3GPP standards to evaluate customer RFPs. Reduced response time by 60%+ while ensuring technical accuracy and consistency across complex tender responses.</p>
+      <a href="https://irshankhan.wordpress.com/" target="_blank" rel="noopener" class="link-arrow" style="margin-top:1.5rem;">Learn more</a>
+    </div>
+    <div class="process-cell">
+      <div class="process-cell-icon">⚡</div>
+      <div class="process-cell-name">Zero Touch Deployment</div>
+      <p class="process-cell-desc">Automated order management, license activation, network planning, and application deployment — empowering customers and partners with fully self-serve tools. Eliminated manual configuration steps and reduced deployment time from days to hours.</p>
+      <a href="https://irshankhan.wordpress.com/direct-delivery/" target="_blank" rel="noopener" class="link-arrow" style="margin-top:1.5rem;">Learn more</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div><div class="footer-name">Irshan<br><em>Khan</em></div><p class="footer-bio">34+ patents. Breakthrough indoor navigation, positioning algorithms, and intelligent location technologies.</p></div>
+  <div>
+    <div class="footer-col-label">Navigate</div>
+    <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="casestudy.html">Case Study</a></li><li><a href="about.html">About</a></li></ul>
+    <div class="footer-col-label">Connect</div>
+    <ul class="footer-links"><li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener">Portfolio Blog</a></li><li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">&copy; <span id="footer-year"></span> Irshan Khan</span><span class="footer-copy">irshankhan.github.io</span></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

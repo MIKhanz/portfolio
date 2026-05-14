@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Irshan Khan</title>
+<meta name="description" content="Product, Program & Project Manager. Background, experience summary, and leadership philosophy.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.about-hero-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+.about-photo-wrap { position: sticky; top: 88px; }
+.about-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; border-left: 4px solid var(--accent); }
+.about-photo-caption { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.8rem; }
+
+.exp-item { padding: 2rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 160px 1fr; gap: 2rem; align-items: start; }
+.exp-item:last-child { border-bottom: none; }
+.exp-dates { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: var(--muted); padding-top: 4px; }
+.exp-company { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.exp-title { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 0.7rem; }
+.exp-desc { font-size: 0.9rem; line-height: 1.8; color: #4a4844; }
+
+.phil-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.phil-item { background: var(--paper); padding: 2.4rem; transition: background 0.2s; }
+.phil-item:hover { background: #f0ede6; }
+.phil-num { font-family: var(--font-display); font-size: 2.6rem; font-weight: 300; color: var(--border); line-height: 1; margin-bottom: 0.8rem; }
+.phil-title { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.7rem; }
+.phil-text { font-size: 0.9rem; line-height: 1.8; color: #4a4844; }
+
+@media (max-width: 768px) {
+  .about-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-photo-wrap { position: static; }
+  .about-photo { max-width: 320px; }
+  .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .phil-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body class="page-wrap">
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">Irshan<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-menu">
+    <a href="../index.html">Home</a><a href="products.html">Products</a><a href="services.html">Services</a><a href="innovation.html">Innovation</a><a href="casestudy.html">Case Study</a><a href="about.html" class="active">About</a><a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">About</p>
+    <h1 class="page-hero-title">Irshan <em>Khan</em></h1>
+    <p class="page-hero-desc">Product, Program &amp; Project Manager. Building differentiated products at the intersection of wireless networks, edge computing, and intelligent location technology.</p>
+  </div>
+</div>
+
+<!-- BIO + PHOTO -->
+<div class="section">
+  <div class="about-hero-grid">
+    <div class="about-photo-wrap reveal-left">
+      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/irshan1.png?w=522" alt="Irshan Khan" class="about-photo" loading="lazy">
+      <p class="about-photo-caption">Product Leader &amp; Innovator — Telecommunications</p>
+      <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
+        <a href="https://irshankhan.wordpress.com/resume/" target="_blank" rel="noopener" class="btn btn-dark" style="text-align:center; justify-content:center;">View Resume ↗</a>
+        <a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener" class="btn btn-outline" style="text-align:center; justify-content:center;">LinkedIn Profile ↗</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="label" style="margin-bottom:1rem;">Background</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.2;margin-bottom:1.4rem;">Results-driven product leader with deep expertise in end-to-end product and service management</h2>
+      <p class="body-lg" style="margin-bottom:1.2rem;">I deliver innovative solutions across private wireless networks, edge computing platforms, and intelligent location technologies — consistently turning complex technical systems into differentiated commercial products with measurable business impact.</p>
+      <p class="body-md" style="margin-bottom:1.2rem;">My background spans product strategy, programme management, technical requirements engineering, and innovation management — with a working knowledge of 4G/5G networks, Kubernetes orchestration, ERP integration, and indoor positioning deep enough to write API contracts and challenge engineering trade-offs.</p>
+      <p class="body-md" style="margin-bottom:2rem;">With 34+ patents filed and a track record of leading cross-functional teams across Sales, Finance, Operations, and Engineering, I bring both the strategic clarity and technical fluency needed to ship products that matter.</p>
+
+      <div class="callout" style="margin-bottom:2rem;">
+        "Blending strategic product thinking with technical fluency, operational rigor, and an unwavering commitment to quality — to build products that genuinely move industries forward."
+      </div>
+
+      <div class="tags">
+        <span class="tag">Product Strategy</span>
+        <span class="tag">Programme Management</span>
+        <span class="tag">Private Wireless</span>
+        <span class="tag">Edge Computing</span>
+        <span class="tag">Indoor Navigation</span>
+        <span class="tag">API Design</span>
+        <span class="tag">Agile / Scrum</span>
+        <span class="tag">ISO 9001</span>
+        <span class="tag">34+ Patents</span>
+        <span class="tag">Stakeholder Management</span>
+        <span class="tag">Data Governance</span>
+        <span class="tag">Kubernetes</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section" style="padding-top:0;">
+  <div class="sec-head reveal"><span class="sec-num">Experience</span><h2 class="sec-title">Career <em>History</em></h2><div class="sec-rule"></div></div>
+
+  <div class="reveal">
+    <div class="exp-item">
+      <div class="exp-dates">Nokia</div>
+      <div>
+        <div class="exp-company">Nokia</div>
+        <div class="exp-title">Product Manager — NDAC (Nokia Digital Automation Cloud)</div>
+        <p class="exp-desc">Led product strategy for private wireless networks and edge computing platforms. Authored functional requirements and API specifications for an 8-system enterprise integration platform. Managed stakeholder alignment across Sales, Finance, Operations, Delivery, and Supply Chain. Defined the order-to-delivery transformation programme — achieving 70%+ automation of standard order flows. Contributed to zero-touch deployment tooling and AI-driven RFP evaluation processes.</p>
+        <div class="tags" style="margin-top:1rem;"><span class="tag">Private Wireless</span><span class="tag">Edge Computing</span><span class="tag">Platform Integration</span><span class="tag">Programme Management</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dates">HERE Technologies</div>
+      <div>
+        <div class="exp-company">HERE Technologies</div>
+        <div class="exp-title">Product Manager — Indoor Positioning &amp; Navigation</div>
+        <p class="exp-desc">Owned the product roadmap for indoor positioning products including HERE Indoor Radio Mapper, Radio Map Admin Tool, Indoor Parking Maps, and Visual Positioning System. Filed 34+ patents across indoor navigation, positioning algorithms, and map data structures including breakthrough Mirror Beacon Technology. Led ISO 9001:2015 quality audit for the indoor positioning product line. Drove commercial launch of indoor parking maps across 400+ facilities globally.</p>
+        <div class="tags" style="margin-top:1rem;"><span class="tag">Indoor Positioning</span><span class="tag">34+ Patents</span><span class="tag">Automotive</span><span class="tag">ISO 9001</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dates">Earlier</div>
+      <div>
+        <div class="exp-company">Earlier Roles</div>
+        <div class="exp-title">Product &amp; Programme Management</div>
+        <p class="exp-desc">Previous experience in product and programme management across mobile, IoT, and connected device domains — spanning product definition, go-to-market strategy, technical requirements, and cross-functional delivery leadership.</p>
+        <div class="tags" style="margin-top:1rem;"><span class="tag">Mobile</span><span class="tag">IoT</span><span class="tag">Connected Devices</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS SUMMARY -->
+<div class="section-full" style="background:var(--ink); padding: var(--pad-sect) var(--pad-x);">
+  <div style="max-width:var(--max-w); margin:0 auto;">
+    <div class="sec-head dark reveal">
+      <span class="sec-num" style="color:var(--accent-lt);">Capabilities</span>
+      <h2 class="sec-title" style="color:var(--paper);">Core <em style="color:var(--accent-lt);">Strengths</em></h2>
+      <div class="sec-rule" style="background:var(--border-dark);"></div>
+    </div>
+    <div class="stats-row stats-row-4 reveal" style="background:var(--border-dark);">
+      <div class="stat-cell stat-cell-dark"><div class="stat-num" style="font-size:1.6rem;line-height:1.4;">Product</div><div class="stat-label">Strategy, roadmapping, OKRs, go-to-market, launch</div></div>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num" style="font-size:1.6rem;line-height:1.4;">Technical</div><div class="stat-label">5G, Kubernetes, ERP, API design, data governance</div></div>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num" style="font-size:1.6rem;line-height:1.4;">Leadership</div><div class="stat-label">Cross-functional teams, RACI, stakeholder alignment</div></div>
+      <div class="stat-cell stat-cell-dark"><div class="stat-num" style="font-size:1.6rem;line-height:1.4;">Innovation</div><div class="stat-label">34+ patents, invention management, patent strategy</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="section">
+  <div class="sec-head reveal"><span class="sec-num">Philosophy</span><h2 class="sec-title">Leadership <em>Approach</em></h2><div class="sec-rule"></div></div>
+  <div class="phil-grid reveal">
+    <div class="phil-item">
+      <div class="phil-num">01</div>
+      <div class="phil-title">Strategic Clarity</div>
+      <p class="phil-text">Transparent roadmaps and continuous discovery keep teams aligned with product vision and business outcomes — removing ambiguity at every level and enabling fast, confident decisions.</p>
+    </div>
+    <div class="phil-item">
+      <div class="phil-num">02</div>
+      <div class="phil-title">Technical Fluency</div>
+      <p class="phil-text">Deep architectural awareness enables meaningful collaboration with engineering teams, driving decisions that balance velocity with technical integrity — and earning credibility with the people who build the product.</p>
+    </div>
+    <div class="phil-item">
+      <div class="phil-num">03</div>
+      <div class="phil-title">Quality by Design</div>
+      <p class="phil-text">Integrating testability, automation, and observability into the development lifecycle from day one — validated through ISO 9001:2015 audit at HERE Technologies and embedded in every product process I own.</p>
+    </div>
+    <div class="phil-item">
+      <div class="phil-num">04</div>
+      <div class="phil-title">Operational Rigour</div>
+      <p class="phil-text">Disciplined execution with predictable delivery rhythms, clear escalation paths, and SLA-backed frameworks for mission-critical operations — building the kind of reliability that earns long-term trust.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div><div class="footer-name">Irshan<br><em>Khan</em></div><p class="footer-bio">Product, Program &amp; Project Manager across private wireless, edge computing, and intelligent location technologies.</p></div>
+  <div>
+    <div class="footer-col-label">Navigate</div>
+    <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="innovation.html">Innovation</a></li><li><a href="casestudy.html">Case Study</a></li></ul>
+    <div class="footer-col-label">Connect</div>
+    <ul class="footer-links"><li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener">Portfolio Blog</a></li><li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://irshankhan.wordpress.com/resume/" target="_blank" rel="noopener">Resume</a></li></ul>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">&copy; <span id="footer-year"></span> Irshan Khan</span><span class="footer-copy">irshankhan.github.io</span></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

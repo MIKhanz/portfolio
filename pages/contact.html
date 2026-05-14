@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Irshan Khan</title>
+<meta name="description" content="Get in touch with Irshan Khan — product manager, innovator, and platform leader.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.contact-cell { background: var(--paper); padding: 3.5rem; }
+.contact-cell:first-child { border-right: 1px solid var(--border); }
+.contact-links { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 2rem; }
+.contact-link-row { background: var(--paper); display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.8rem; text-decoration: none; transition: background 0.2s; }
+.contact-link-row:hover { background: #f0ede6; }
+.contact-link-label { font-family: var(--font-ui); font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.contact-link-sub { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+.contact-link-arrow { color: var(--accent); font-size: 1rem; transition: transform 0.2s; }
+.contact-link-row:hover .contact-link-arrow { transform: translateX(4px); }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.2rem; }
+.form-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.form-input, .form-textarea {
+  background: var(--cream); border: 1px solid var(--border); padding: 0.9rem 1rem;
+  font-family: var(--font-display); font-size: 1rem; color: var(--ink);
+  transition: border-color 0.2s; width: 100%; outline: none;
+}
+.form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+.form-textarea { resize: vertical; min-height: 130px; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .contact-cell:first-child { border-right: none; border-bottom: 1px solid var(--border); } }
+</style>
+</head>
+<body class="page-wrap">
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">Irshan<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-menu">
+    <a href="../index.html">Home</a><a href="products.html">Products</a><a href="services.html">Services</a><a href="innovation.html">Innovation</a><a href="casestudy.html">Case Study</a><a href="about.html">About</a><a href="contact.html" class="active nav-cta">Contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Contact</p>
+    <h1 class="page-hero-title">Get In <em>Touch</em></h1>
+    <p class="page-hero-desc">Open to product leadership roles, consulting engagements, and conversations about private wireless, edge computing, or platform strategy.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="contact-grid reveal">
+    <div class="contact-cell">
+      <div class="label" style="margin-bottom:1.2rem;">Connect directly</div>
+      <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:300;line-height:1.2;margin-bottom:1rem;">Let's talk product <em style="font-style:italic;color:var(--accent);">strategy</em></h2>
+      <p class="body-md" style="margin-bottom:0.5rem;">Available for product leadership roles, advisory engagements, and consulting on private wireless, edge platform strategy, and enterprise integration programmes.</p>
+      <p class="body-md" style="margin-bottom:2rem;">Reach out through any of the channels below — LinkedIn is the fastest route.</p>
+
+      <div class="contact-links">
+        <a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener" class="contact-link-row">
+          <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-sub">Fastest response</div></div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener" class="contact-link-row">
+          <div><div class="contact-link-label">Portfolio Blog</div><div class="contact-link-sub">irshankhan.wordpress.com</div></div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://irshankhan.wordpress.com/resume/" target="_blank" rel="noopener" class="contact-link-row">
+          <div><div class="contact-link-label">View Resume</div><div class="contact-link-sub">Full career history &amp; credentials</div></div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+      </div>
+
+      <div style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border);">
+        <div class="label" style="margin-bottom:1rem;">Areas of interest</div>
+        <div class="tags">
+          <span class="tag">Product Leadership</span>
+          <span class="tag">Private Wireless Strategy</span>
+          <span class="tag">Edge Platform Consulting</span>
+          <span class="tag">Platform Integration</span>
+          <span class="tag">Innovation Management</span>
+          <span class="tag">Advisory Roles</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-cell">
+      <div class="label" style="margin-bottom:1.2rem;">Send a message</div>
+      <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:300;line-height:1.2;margin-bottom:1.5rem;">Drop me a <em style="font-style:italic;color:var(--accent);">note</em></h2>
+      <form action="https://formspree.io/f/placeholder" method="POST" id="contact-form">
+        <div class="form-group">
+          <label class="form-label" for="name">Your Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="subject">Subject</label>
+          <input class="form-input" type="text" id="subject" name="subject" placeholder="Product leadership opportunity">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about the opportunity or how I can help…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark" style="width:100%; justify-content:center;">Send Message →</button>
+        <p style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.08em;color:var(--muted);margin-top:0.8rem;text-align:center;">
+          Or connect directly via <a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener" style="color:var(--accent);">LinkedIn</a> for a faster response.
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div><div class="footer-name">Irshan<br><em>Khan</em></div><p class="footer-bio">Product, Program &amp; Project Manager. Private wireless, edge computing, indoor positioning. 34+ patents.</p></div>
+  <div>
+    <div class="footer-col-label">Navigate</div>
+    <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="innovation.html">Innovation</a></li><li><a href="casestudy.html">Case Study</a></li><li><a href="about.html">About</a></li></ul>
+    <div class="footer-col-label">Connect</div>
+    <ul class="footer-links"><li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener">Portfolio Blog</a></li><li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">&copy; <span id="footer-year"></span> Irshan Khan</span><span class="footer-copy">irshankhan.github.io</span></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

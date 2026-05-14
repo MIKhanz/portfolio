@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Irshan Khan</title>
+<meta name="description" content="Product portfolio: private wireless, edge computing, indoor positioning, smart home tracking, and more.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.prod-featured {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border); margin-bottom: 1px;
+}
+.prod-feat-content { padding: 3.5rem; display: flex; flex-direction: column; border-right: 1px solid var(--border); }
+.prod-feat-img { overflow: hidden; min-height: 380px; }
+.prod-feat-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.82); transition: filter 0.5s, transform 0.6s; }
+.prod-featured:hover .prod-feat-img img { filter: saturate(1.05); transform: scale(1.03); }
+.prod-feat-title { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight: 300; line-height: 1.1; margin: 0.6rem 0 1.2rem; }
+.prod-feat-desc { font-size: 1rem; line-height: 1.8; color: #4a4844; flex: 1; margin-bottom: 1.8rem; }
+.prod-benefits { list-style: none; margin-bottom: 2rem; }
+.prod-benefits li {
+  font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; color: var(--muted);
+  padding: 0.5rem 0; border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.prod-benefits li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+
+/* Grid cards */
+.products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.prod-card { background: var(--paper); display: flex; flex-direction: column; overflow: hidden; position: relative; transition: background 0.25s; }
+.prod-card:hover { background: #f0ede6; }
+.prod-card-img { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--border); filter: saturate(0.78); transition: filter 0.4s, transform 0.5s; }
+.prod-card:hover .prod-card-img { filter: saturate(1.05); transform: scale(1.03); }
+.prod-card-body { padding: 2rem 2.2rem; flex: 1; display: flex; flex-direction: column; }
+.prod-card-label { font-family: var(--font-mono); font-size: 0.57rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+.prod-card-name { font-family: var(--font-ui); font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.7rem; }
+.prod-card-desc { font-size: 0.88rem; line-height: 1.75; color: #4a4844; flex: 1; margin-bottom: 1.2rem; }
+.prod-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+@media (max-width: 1024px) { .prod-featured { grid-template-columns: 1fr; } .prod-feat-content { border-right: none; border-bottom: 1px solid var(--border); } .products-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="page-wrap">
+
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">Irshan<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-menu">
+    <a href="../index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="services.html">Services</a>
+    <a href="innovation.html">Innovation</a>
+    <a href="casestudy.html">Case Study</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Portfolio</p>
+    <h1 class="page-hero-title">Product <em>Portfolio</em></h1>
+    <p class="page-hero-desc">A portfolio spanning private wireless, edge AI, indoor navigation, and smart environments — each product shaped from concept through commercial launch.</p>
+  </div>
+</div>
+
+<!-- FEATURED: SMART HOME -->
+<div class="section">
+  <div class="sec-head reveal"><span class="sec-num">Featured</span><h2 class="sec-title">Smart Home <em>Tracking</em></h2><div class="sec-rule"></div></div>
+  <div class="prod-featured reveal">
+    <div class="prod-feat-content">
+      <div class="label">Featured Product</div>
+      <h3 class="prod-feat-title">Smart Home Tracking Solution</h3>
+      <p class="prod-feat-desc">Integrates BLE trackers, home automation devices, advanced notification systems, and voice assistant capabilities — including native Amazon Alexa integration — to enhance convenience, security, and efficiency in modern households.</p>
+      <ul class="prod-benefits">
+        <li>Mobile application delivered on time</li>
+        <li>Amazon Alexa Skill MVP shipped</li>
+        <li>BLE + home automation device integration</li>
+        <li>Advanced notification and automation rules</li>
+      </ul>
+      <div class="tags" style="margin-bottom:1.8rem;">
+        <span class="pill">Mobile App</span>
+        <span class="pill">Alexa Skill MVP</span>
+        <span class="pill">BLE</span>
+      </div>
+      <a href="https://irshankhan.wordpress.com/smarthometracking/" target="_blank" rel="noopener" class="link-arrow">View full case study</a>
+    </div>
+    <div class="prod-feat-img">
+      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/12/the-smart-home-tracking-solution-integrates-ble-trackers-home-automation.png" alt="Smart Home Tracking" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="section" style="padding-top:0;">
+  <div class="sec-head reveal"><span class="sec-num">01 – 06</span><h2 class="sec-title">All <em>Products</em></h2><div class="sec-rule"></div></div>
+
+  <div class="products-grid reveal" data-stagger>
+
+    <div class="prod-card">
+      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/privatewireless.png" alt="Private Wireless" class="prod-card-img" loading="lazy">
+      <div class="prod-card-body">
+        <div class="prod-card-label">Connectivity</div>
+        <div class="prod-card-name">Private Wireless Network</div>
+        <p class="prod-card-desc">Dedicated 4G/5G with deterministic latency, robust mobility, and full enterprise control for industrial automation and real-time analytics. SIM-based authentication, QoS flows, local breakout, and slicing.</p>
+        <div class="prod-card-footer">
+          <div class="tags"><span class="tag">4G/5G</span><span class="tag">Industrial IoT</span></div>
+          <a href="https://www.dac.nokia.com/connectivity-solutions/private-wireless/" target="_blank" rel="noopener" class="link-arrow">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/edgecomputeplatform.jpg" alt="Edge Platform" class="prod-card-img" loading="lazy">
+      <div class="prod-card-body">
+        <div class="prod-card-label">Computing</div>
+        <div class="prod-card-name">Edge Application Platform</div>
+        <p class="prod-card-desc">GPU-accelerated compute with Kubernetes orchestration — enabling AI, computer vision, IoT orchestration, and digital twins at the edge. Rich industrial application ecosystem with automated lifecycle management.</p>
+        <div class="prod-card-footer">
+          <div class="tags"><span class="tag">Edge AI</span><span class="tag">Kubernetes</span></div>
+          <a href="https://www.dac.nokia.com/" target="_blank" rel="noopener" class="link-arrow">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-card-body" style="padding-top: 2.5rem;">
+        <div class="prod-card-label">Location</div>
+        <div class="prod-card-name">Geofencing Solution</div>
+        <p class="prod-card-desc">Location-aware automation and targeted engagement through dynamic geofence-triggered actions. Supports industrial safety zones, marketing activation, and enterprise access control with real-time event processing.</p>
+        <div class="prod-card-footer">
+          <div class="tags"><span class="tag">Location</span><span class="tag">Automation</span></div>
+          <a href="https://irshankhan.wordpress.com/geofencing-solution/" target="_blank" rel="noopener" class="link-arrow">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-card-body" style="padding-top: 2.5rem;">
+        <div class="prod-card-label">Navigation</div>
+        <div class="prod-card-name">Indoor Positioning System</div>
+        <p class="prod-card-desc">High-accuracy indoor navigation for large, complex facilities using HERE Indoor Radio Mapper and Radio Map Admin Tool. Sub-metre positioning, multi-floor venue support, offline and low-power operation.</p>
+        <div class="prod-card-footer">
+          <div class="tags"><span class="tag">Indoor Nav</span><span class="tag">HERE</span></div>
+          <div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
+            <a href="http://youtube.com/watch?v=Ysw63DPCYQM" target="_blank" rel="noopener" class="link-arrow">Radio Mapper</a>
+            <a href="https://www.youtube.com/watch?v=xndZaqI2cIo" target="_blank" rel="noopener" class="link-arrow">Admin Tool</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-card-body" style="padding-top: 2.5rem;">
+        <div class="prod-card-label">Automotive</div>
+        <div class="prod-card-name">Indoor Parking Maps</div>
+        <p class="prod-card-desc">High-precision indoor geometry and routing data enhancing ADAS and Automated Valet Parking systems. Automotive OEM-grade accuracy with end-to-end EV navigation integration across 400+ parking facilities.</p>
+        <div class="prod-card-footer">
+          <div class="tags"><span class="tag">ADAS</span><span class="tag">Automotive</span></div>
+          <a href="https://www.here.com/about/press-releases/here-adds-400-indoor-parking-garages-for-end-to-end-navigation-and-electric" target="_blank" rel="noopener" class="link-arrow">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-card-body" style="padding-top: 2.5rem;">
+        <div class="prod-card-label">Navigation</div>
+        <div class="prod-card-name">Visual Positioning</div>
+        <p class="prod-card-desc">Uses smartphone cameras to deliver precise indoor location for automotive companion apps — enabling seamless navigation without dedicated infrastructure. Ideal for parking garages, airports, and large venues.</p>
+        <div class="prod-card-footer">
+          <div class="tags"><span class="tag">Camera-Based</span><span class="tag">Indoor</span></div>
+          <a href="pages/innovation.html" class="link-arrow">Innovation page</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div><div class="footer-name">Irshan<br><em>Khan</em></div><p class="footer-bio">Product leader across private wireless, edge AI, and intelligent location technologies.</p></div>
+  <div>
+    <div class="footer-col-label">Navigate</div>
+    <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="innovation.html">Innovation</a></li><li><a href="casestudy.html">Case Study</a></li><li><a href="about.html">About</a></li></ul>
+    <div class="footer-col-label">Connect</div>
+    <ul class="footer-links"><li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener">Portfolio Blog</a></li><li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+    <div class="tags footer-tags"><span class="tag tag-dark">Private Wireless</span><span class="tag tag-dark">Edge AI</span><span class="tag tag-dark">Indoor Navigation</span></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">&copy; <span id="footer-year"></span> Irshan Khan</span><span class="footer-copy">irshankhan.github.io</span></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

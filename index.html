@@ -1,2398 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <title>Irshan Khan — Product, Program &amp; Project Manager | Innovator</title>
-  <meta name="description" content="Results-driven product leader with deep expertise in private wireless networks, edge computing platforms, and intelligent location technologies. 34+ patents filed.">
-  <meta name="author" content="Irshan Khan">
-  <meta name="keywords" content="product manager, program manager, private wireless, 5G, edge computing, indoor positioning, Nokia, HERE Technologies, innovator">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://irshankhan.github.io/">
-  <meta property="og:title" content="Irshan Khan — Product Leader &amp; Innovator">
-  <meta property="og:description" content="Results-driven product leader across private wireless, edge computing, and location technologies. 34+ patents.">
-  <meta property="og:image" content="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/irshan1.png?w=522">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Irshan Khan — Product Leader &amp; Innovator">
-  <meta name="twitter:description" content="Results-driven product leader across private wireless, edge computing, and location technologies.">
-  <meta name="twitter:image" content="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/irshan1.png?w=522">
-
-  <link rel="canonical" href="https://irshankhan.github.io/">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irshan Khan — Product Leader &amp; Innovator</title>
+<meta name="description" content="Product, Program &amp; Project Manager. Private wireless, edge computing, indoor positioning. 34+ patents.">
+<link rel="canonical" href="https://irshankhan.github.io/">
+<meta property="og:title" content="Irshan Khan — Product Leader"><meta property="og:description" content="34+ patents. Private wireless, edge computing, indoor positioning."><meta property="og:image" content="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/irshan1.png?w=522">
+<link rel="stylesheet" href="css/style.css">
 <style>
-/* ============================================================
-   IRSHAN KHAN PORTFOLIO — MERGED STYLESHEET
-============================================================ */
-
-:root {
-  --ink:          #0a0a0f;
-  --paper:        #f5f3ee;
-  --accent:       #c8410a;
-  --accent-light: #e8956d;
-  --muted:        #8a8680;
-  --border:       rgba(10,10,15,0.12);
-
-  /* Case-study palette (harmonised to same accent) */
-  --cs-slate:  #1c2b3a;
-  --cs-mid:    #3a4a5a;
-  --cs-light:  #d4e3f0;
-  --cs-pale:   #eaf0f6;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 18px;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* Grain overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.4;
-}
-
-/* ── NAV ──────────────────────────────────────────────────── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 3rem;
-  background: rgba(245,243,238,0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-.nav-links a {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--accent); }
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
-  background: none;
-  border: none;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background: var(--ink);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-/* ── HERO ─────────────────────────────────────────────────── */
+/* ── HOME-SPECIFIC ─────────────────────────────────── */
 .hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 8rem 3rem 5rem;
-  gap: 4rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 4rem;
+  padding: 7rem var(--pad-x) 5rem;
+  max-width: var(--max-w); margin: 0 auto;
 }
-
-.hero-text { padding-top: 2rem; }
-
 .hero-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 0.2s;
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 1.4rem;
+  animation: fadeUp 0.7s ease forwards 0.15s; opacity: 0;
 }
-
 .hero-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(4rem, 7vw, 7rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 0.4s;
+  font-family: var(--font-display); font-size: clamp(4rem, 7.5vw, 7rem);
+  font-weight: 300; line-height: 0.92; letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+  animation: fadeUp 0.75s ease forwards 0.3s; opacity: 0;
 }
-
-.hero-name em { font-style: italic; color: var(--accent); }
-
-.hero-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 2.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 0.6s;
+.hero-name em { font-style: italic; color: var(--accent); display: block; }
+.hero-role {
+  font-family: var(--font-ui); font-size: 0.82rem; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 2rem;
+  animation: fadeUp 0.75s ease forwards 0.45s; opacity: 0;
 }
-
 .hero-bio {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #3a3834;
-  max-width: 520px;
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 0.8s;
-}
-
-.hero-resume-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink);
-  text-decoration: none;
-  padding: 0.8rem 1.6rem;
-  border: 1px solid var(--ink);
-  transition: background 0.2s, color 0.2s;
-  margin-bottom: 2.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 1s;
-}
-
-.hero-resume-link::after { content: ' ↗'; }
-.hero-resume-link:hover { background: var(--ink); color: var(--paper); }
-
-.hero-stats {
-  display: flex;
-  gap: 3rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 1.1s;
-}
-
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.8rem;
-  font-weight: 300;
-  line-height: 1;
-  color: var(--ink);
-}
-
-.stat-num span { color: var(--accent); }
-
-.stat-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 0.3rem;
-}
-
-.hero-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards 0.5s;
-}
-
-.hero-visual-bg {
-  position: absolute;
-  width: 420px;
-  height: 520px;
-  background: linear-gradient(135deg, #e8c5b0 0%, #d4956a 50%, #c8410a 100%);
-  border-radius: 200px 200px 200px 60px;
-  opacity: 0.15;
-}
-
-.hero-card {
-  position: relative;
-  background: white;
-  border-radius: 2px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.16);
-  max-width: 400px;
-  overflow: hidden;
-  border-left: 4px solid var(--accent);
-}
-
-.hero-photo {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-.hero-card-body { padding: 2rem 2.5rem; }
-
-.hero-card-quote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  font-style: italic;
-  line-height: 1.55;
-  color: var(--ink);
-  margin-bottom: 1.5rem;
-}
-
-.hero-card-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.hero-card-tag::before {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--accent);
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.2rem;
-}
-
-.tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.8rem;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  background: var(--paper);
-}
-
-/* ── SECTION COMMON ───────────────────────────────────────── */
-section {
-  padding: 6rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.section-header {
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
-}
-
-.section-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-
-.section-title em { font-style: italic; color: var(--accent); }
-
-.section-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-  margin-left: 1rem;
-}
-
-/* ── MORE DETAILS LINK ────────────────────────────────────── */
-.more-details {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.4rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s, gap 0.2s;
-}
-
-.more-details::after { content: '→'; }
-.more-details:hover { border-bottom-color: var(--accent); gap: 0.8rem; }
-
-/* ── FEATURED PRODUCT ─────────────────────────────────────── */
-.featured-product {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--border);
-  margin-bottom: 1px;
-}
-
-.featured-product-content {
-  padding: 4rem;
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-}
-
-.featured-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.featured-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-.featured-desc {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #4a4844;
-  margin-bottom: 2rem;
-}
-
-.deliverables {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.deliverable-pill {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.4rem 1rem;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: 100px;
-}
-
-.featured-product-visual { overflow: hidden; }
-
-.featured-product-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  min-height: 360px;
-  transition: transform 0.5s ease;
-}
-
-.featured-product-visual:hover img { transform: scale(1.03); }
-
-/* ── PRODUCT GRID ─────────────────────────────────────────── */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--border);
-}
-
-.product-card {
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  transition: background 0.3s;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card:nth-child(3n) { border-right: none; }
-.product-card:nth-last-child(-n+3) { border-bottom: none; }
-
-.product-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 3px;
-  height: 0;
-  background: var(--accent);
-  transition: height 0.4s ease;
-  z-index: 1;
-}
-
-.product-card:hover::before { height: 100%; }
-.product-card:hover { background: rgba(200,65,10,0.03); }
-
-.product-card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid var(--border);
-  filter: saturate(0.85);
-  transition: filter 0.3s, transform 0.4s;
-}
-
-.product-card:hover .product-card-img { filter: saturate(1.05); transform: scale(1.02); }
-
-.product-card-inner {
-  padding: 2rem 2.5rem 2.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-icon {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 1.5rem;
-  color: var(--accent);
-}
-
-.product-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.product-tagline {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.product-desc { font-size: 1rem; line-height: 1.7; color: #4a4844; }
-
-.product-benefits { margin-top: 1.5rem; list-style: none; flex: 1; }
-
-.product-benefits li {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  padding: 0.4rem 0;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.product-benefits li::before { content: '→'; color: var(--accent); font-size: 0.7rem; flex-shrink: 0; }
-
-/* ── SERVICES ─────────────────────────────────────────────── */
-.services-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--border);
-}
-
-.service-item {
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.service-item:nth-child(2n) { border-right: none; }
-.service-item:nth-last-child(-n+2) { border-bottom: none; }
-
-.service-item-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid var(--border);
-  filter: saturate(0.8);
-  transition: filter 0.4s, transform 0.4s;
-}
-
-.service-item:hover .service-item-img { filter: saturate(1); transform: scale(1.02); }
-
-.service-item-inner {
-  padding: 2.5rem 3rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.service-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  margin-bottom: 0.8rem;
-}
-
-.service-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.service-subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--muted);
-  margin-bottom: 1.2rem;
-}
-
-.service-desc { font-size: 0.95rem; line-height: 1.7; color: #4a4844; flex: 1; }
-
-/* ── INNOVATION ───────────────────────────────────────────── */
-.innovation-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  border: 1px solid var(--border);
-}
-
-.innovation-main { padding: 4rem; border-right: 1px solid var(--border); }
-
-.innovation-sidebar { padding: 3rem 2.5rem; background: var(--ink); color: var(--paper); }
-
-.patent-counter {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 6rem;
-  font-weight: 300;
-  line-height: 1;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-
-.patent-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(245,243,238,0.5);
-  margin-bottom: 2rem;
-}
-
-.innovation-items { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.2rem; }
-
-.innovation-item {
-  padding: 1.2rem;
-  background: rgba(245,243,238,0.06);
-  border-left: 2px solid var(--accent);
-}
-
-.innovation-item-title {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent-light);
-  margin-bottom: 0.4rem;
-}
-
-.innovation-item-desc {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: rgba(245,243,238,0.7);
-  font-family: 'Cormorant Garamond', serif;
-}
-
-/* ── APPROACH ─────────────────────────────────────────────── */
-.approach-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--border);
-  margin-bottom: 4rem;
-}
-
-.approach-item {
-  padding: 3rem 2rem;
-  border-right: 1px solid var(--border);
-  transition: background 0.3s;
-}
-
-.approach-item:last-child { border-right: none; }
-.approach-item:hover { background: rgba(200,65,10,0.04); }
-
-.approach-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 300;
-  color: var(--border);
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-.approach-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.8rem;
-}
-
-.approach-desc { font-size: 0.95rem; line-height: 1.7; color: #4a4844; }
-
-/* ══════════════════════════════════════════════════════════
-   CASE STUDY SECTION — ORDER-TO-DELIVERY PLATFORM
-══════════════════════════════════════════════════════════ */
-
-/* Wrapper strips the default section max-width so the dark
-   full-bleed blocks can span the full viewport */
-#casestudy {
-  padding: 0;
-  max-width: 100%;
-  margin: 0;
-}
-
-/* Every inner block re-applies the max-width cap */
-.cs-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
-
-/* ── CS: Intro banner ────────────────────────────────── */
-.cs-banner {
-  background: var(--ink);
-  padding: 7rem 3rem 5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.cs-banner::after {
-  content: '05';
-  position: absolute;
-  right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.03);
-  line-height: 1;
-  pointer-events: none;
-  letter-spacing: -0.04em;
-}
-
-.cs-banner .cs-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: end;
-}
-
-.cs-banner-left {}
-
-.cs-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent-light);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.cs-eyebrow::before {
-  content: '';
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: var(--accent);
-}
-
-.cs-banner-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 5.5vw, 5.5rem);
-  font-weight: 300;
-  line-height: 0.95;
-  color: var(--paper);
-  letter-spacing: -0.02em;
-  margin-bottom: 1.8rem;
-}
-
-.cs-banner-title em {
-  font-style: italic;
-  color: var(--accent-light);
-}
-
-.cs-banner-desc {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: rgba(245,243,238,0.6);
-  max-width: 460px;
-}
-
-.cs-banner-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.cs-stat {
-  display: flex;
-  align-items: baseline;
-  gap: 1.2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.cs-stat:last-child { border-bottom: none; }
-
-.cs-stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.2rem;
-  font-weight: 300;
-  color: var(--accent-light);
-  line-height: 1;
-  min-width: 100px;
-}
-
-.cs-stat-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(245,243,238,0.4);
-  line-height: 1.5;
-}
-
-/* ── CS: Role strip ──────────────────────────────────── */
-.cs-role {
-  background: var(--accent);
-  padding: 4rem 3rem;
-}
-
-.cs-role .cs-inner {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.cs-role-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 0.8rem;
-}
-
-.cs-role-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem;
-  font-weight: 300;
-  color: #fff;
-  line-height: 1.1;
-}
-
-.cs-role-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.2);
-}
-
-.cs-role-card {
-  background: var(--accent);
-  padding: 1.8rem;
-  transition: background 0.2s;
-}
-
-.cs-role-card:hover { background: rgba(200,65,10,0.7); }
-
-.cs-role-card-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 0.6rem;
-}
-
-.cs-role-card-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.7);
-}
-
-/* ── CS: Challenge / Approach ────────────────────────── */
-.cs-challenge {
-  background: var(--paper);
-  padding: 6rem 3rem;
-}
-
-.cs-challenge .cs-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--border);
-}
-
-.cs-challenge-cell {
-  padding: 3.5rem;
-}
-
-.cs-challenge-cell:first-child {
-  border-right: 1px solid var(--border);
-}
-
-.cs-cell-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.cs-cell-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.cs-cell-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.3;
-  margin-bottom: 1.2rem;
-}
-
-.cs-cell-text {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #4a4844;
-  margin-bottom: 1.5rem;
-}
-
-.cs-pain-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.cs-pain-list li {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.05em;
-  color: var(--muted);
-  line-height: 1.6;
-  padding: 0.5rem 0;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-}
-
-.cs-pain-list li::before {
-  content: '—';
-  color: var(--accent);
-  flex-shrink: 0;
-  margin-top: 0.05em;
-}
-
-/* ── CS: Architecture ────────────────────────────────── */
-.cs-arch {
-  background: var(--ink);
-  padding: 6rem 3rem;
-}
-
-.cs-arch .section-title { color: var(--paper); }
-.cs-arch .section-line { background: rgba(255,255,255,0.1); }
-
-.cs-arch-diagram {
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 3rem;
+  font-size: 1.1rem; line-height: 1.8; color: #3a3834; max-width: 500px;
+  margin-bottom: 2.4rem;
+  animation: fadeUp 0.75s ease forwards 0.6s; opacity: 0;
+}
+.hero-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  animation: fadeUp 0.75s ease forwards 0.72s; opacity: 0;
   margin-bottom: 3rem;
-  position: relative;
 }
-
-.cs-arch-sub {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent-light);
-  margin-bottom: 2.5rem;
-  text-align: center;
+.hero-stats {
+  display: flex; gap: 2.8rem;
+  animation: fadeUp 0.75s ease forwards 0.85s; opacity: 0;
+  padding-top: 2.4rem; border-top: 1px solid var(--border);
 }
+.hero-stat-num { font-family: var(--font-display); font-size: 2.6rem; font-weight: 300; line-height: 1; }
+.hero-stat-num span { color: var(--accent); }
+.hero-stat-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.3rem; }
 
-.cs-arch-layers { display: flex; flex-direction: column; gap: 1rem; }
-
-.cs-arch-layer {
-  display: flex;
-  align-items: stretch;
-  gap: 0.75rem;
-}
-
-.cs-layer-label {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
-  min-width: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.cs-layer-nodes { display: flex; gap: 0.5rem; flex: 1; }
-
-.cs-node {
-  flex: 1;
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 1rem 0.8rem;
-  text-align: center;
-  cursor: default;
-  transition: border-color 0.25s, background 0.25s;
-}
-
-.cs-node:hover {
-  border-color: var(--accent);
-  background: rgba(200,65,10,0.08);
-}
-
-.cs-node.hl {
-  border-color: var(--accent);
-  background: rgba(200,65,10,0.12);
-}
-
-.cs-node-name {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 0.25rem;
-}
-
-.cs-node-name.hl { color: var(--accent-light); }
-
-.cs-node-desc {
-  font-size: 0.65rem;
-  color: rgba(255,255,255,0.28);
-  line-height: 1.3;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.cs-arch-arrow {
-  text-align: center;
-  color: rgba(255,255,255,0.15);
-  font-size: 0.8rem;
-  padding: 0.2rem 0;
-  padding-left: 30px;
-}
-
-.cs-arch-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.06);
-}
-
-.cs-arch-card {
-  background: var(--ink);
-  padding: 2.5rem;
-  transition: background 0.2s;
-}
-
-.cs-arch-card:hover { background: rgba(200,65,10,0.07); }
-
-.cs-arch-card-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.08);
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-.cs-arch-card-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent-light);
-  margin-bottom: 0.8rem;
-}
-
-.cs-arch-card-text {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: rgba(245,243,238,0.55);
-  font-family: 'Cormorant Garamond', serif;
-}
-
-/* ── CS: Process timeline ────────────────────────────── */
-.cs-process {
-  background: #f0ede6;
-  padding: 6rem 3rem;
-}
-
-.cs-timeline {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.cs-timeline::before {
-  content: '';
-  position: absolute;
-  left: 148px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--accent) 8%, var(--accent) 92%, transparent);
-}
-
-.cs-tl-item {
-  display: grid;
-  grid-template-columns: 128px 40px 1fr;
-  align-items: start;
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.cs-tl-item:last-child { border-bottom: none; }
-
-.cs-tl-phase { text-align: right; padding-top: 4px; }
-
-.cs-tl-phase-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.cs-tl-phase-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.cs-tl-dot {
-  display: flex;
-  justify-content: center;
-  padding-top: 9px;
-  position: relative;
-  z-index: 2;
-}
-
-.cs-tl-dot::before {
-  content: '';
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid #f0ede6;
-  box-shadow: 0 0 0 1px var(--accent);
-  flex-shrink: 0;
-}
-
-.cs-tl-content {}
-
-.cs-tl-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  color: var(--ink);
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
-  font-style: italic;
-}
-
-.cs-tl-text {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: #4a4844;
-  margin-bottom: 1rem;
-  max-width: 580px;
-}
-
-.cs-tl-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.cs-tl-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: rgba(200,65,10,0.07);
-  border: 1px solid rgba(200,65,10,0.18);
-  padding: 0.25rem 0.7rem;
-}
-
-/* ── CS: Outcomes ────────────────────────────────────── */
-.cs-outcomes {
-  background: var(--accent);
-  padding: 6rem 3rem;
-  position: relative;
+/* Hero visual */
+.hero-visual { display: flex; align-items: center; justify-content: center; animation: fadeIn 1.1s ease forwards 0.4s; opacity: 0; }
+.hero-card {
+  background: #fff; box-shadow: 0 28px 72px rgba(10,10,15,0.14);
+  max-width: 380px; width: 100%;
+  border-left: 4px solid var(--accent);
   overflow: hidden;
 }
-
-.cs-outcomes::before {
-  content: 'RESULTS';
-  position: absolute;
-  bottom: -3rem;
-  right: 2rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 16rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.05);
-  letter-spacing: -0.03em;
-  pointer-events: none;
-  line-height: 1;
+.hero-photo { width: 100%; height: 320px; object-fit: cover; object-position: center top; }
+.hero-card-body { padding: 1.8rem 2rem; }
+.hero-card-quote {
+  font-family: var(--font-display); font-size: 1.05rem; font-style: italic;
+  line-height: 1.6; color: var(--ink); margin-bottom: 1.2rem;
 }
+.hero-card-byline { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 0.6rem; }
+.hero-card-byline::before { content:''; width:16px; height:1px; background:var(--accent); }
 
-.cs-outcomes .section-title { color: #fff; }
-.cs-outcomes .section-line { background: rgba(255,255,255,0.2); }
-.cs-outcomes .section-num  { color: rgba(255,255,255,0.45); }
-
-.cs-outcomes-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.18);
-  margin-bottom: 2px;
+/* Featured projects */
+.featured-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
 }
+.feat-card { background: var(--paper); display: flex; flex-direction: column; overflow: hidden; transition: background 0.25s; }
+.feat-card:hover { background: #f0ede6; }
+.feat-card-img { width: 100%; height: 240px; object-fit: cover; border-bottom: 1px solid var(--border); filter: saturate(0.8); transition: filter 0.4s, transform 0.5s; }
+.feat-card:hover .feat-card-img { filter: saturate(1.05); transform: scale(1.03); }
+.feat-card-body { padding: 2rem 2.4rem; flex: 1; display: flex; flex-direction: column; }
+.feat-card-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+.feat-card-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 0.8rem; }
+.feat-card-desc { font-size: 0.9rem; line-height: 1.75; color: #4a4844; flex: 1; margin-bottom: 1.4rem; }
+.feat-card-footer { display: flex; justify-content: space-between; align-items: flex-end; padding-top: 1rem; border-top: 1px solid var(--border); margin-top: auto; }
 
-.cs-outcome-cell {
-  background: var(--accent);
-  padding: 3rem 2rem;
-  text-align: center;
-  transition: background 0.2s;
+/* Value proposition strip */
+.value-strip {
+  background: var(--ink); padding: clamp(3rem,5vw,5rem) var(--pad-x);
+  display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: center;
+  max-width: 100%;
 }
-
-.cs-outcome-cell:hover { background: rgba(200,65,10,0.75); }
-
-.cs-outcome-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.2rem;
-  font-weight: 300;
-  color: #fff;
-  line-height: 1;
-  margin-bottom: 0.5rem;
+.value-strip-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: center; width: 100%; }
+.value-headline { font-family: var(--font-display); font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.15; color: var(--paper); }
+.value-headline em { font-style: italic; color: var(--accent-lt); }
+.value-pills { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.value-pill {
+  font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.55rem 1.2rem; border: 1px solid rgba(245,243,238,0.18);
+  color: rgba(245,243,238,0.7); transition: border-color 0.2s, color 0.2s;
 }
+.value-pill:hover { border-color: var(--accent); color: var(--accent-lt); }
 
-.cs-outcome-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.5;
-}
-
-.cs-outcomes-qual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: rgba(255,255,255,0.18);
-  margin-top: 1px;
-}
-
-.cs-qual-item {
-  background: var(--accent);
-  padding: 2rem 2.5rem;
-  transition: background 0.2s;
-}
-
-.cs-qual-item:hover { background: rgba(200,65,10,0.75); }
-
-.cs-qual-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 0.6rem;
-}
-
-.cs-qual-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.85);
-}
-
-/* ── CS: Skills ──────────────────────────────────────── */
-.cs-skills {
-  background: var(--paper);
-  padding: 6rem 3rem;
-}
-
-.cs-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--border);
-}
-
-.cs-skill-cell {
-  padding: 2.8rem;
+/* Quick nav */
+.quick-nav { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.qnav-item {
+  background: var(--paper); padding: 2.4rem 2rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+  text-decoration: none; transition: background 0.25s;
   border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  transition: background 0.2s;
+  position: relative; overflow: hidden;
 }
+.qnav-item:last-child { border-right: none; }
+.qnav-item:hover { background: #f0ede6; }
+.qnav-item::after { content: '→'; position: absolute; bottom: 1.8rem; right: 1.8rem; font-size: 0.85rem; color: var(--accent); opacity: 0; transition: opacity 0.25s, transform 0.25s; transform: translateX(-6px); }
+.qnav-item:hover::after { opacity: 1; transform: translateX(0); }
+.qnav-num { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.qnav-label { font-family: var(--font-ui); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.qnav-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
-.cs-skill-cell:nth-child(3n) { border-right: none; }
-.cs-skill-cell:nth-last-child(-n+3) { border-bottom: none; }
-.cs-skill-cell:hover { background: rgba(200,65,10,0.03); }
-
-.cs-skill-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.8rem;
-}
-
-.cs-skill-text {
-  font-size: 0.92rem;
-  line-height: 1.75;
-  color: #4a4844;
-  margin-bottom: 1.2rem;
-}
-
-.cs-skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-
-.cs-skill-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: rgba(10,10,15,0.05);
-  padding: 0.25rem 0.7rem;
-  border: 1px solid var(--border);
-}
-
-/* ── FOOTER ───────────────────────────────────────────────── */
-footer {
-  background: var(--ink);
-  color: var(--paper);
-  padding: 5rem 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.footer-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 1;
-  margin-bottom: 1.5rem;
-}
-
-.footer-name em { font-style: italic; color: var(--accent); }
-
-.footer-bio { font-size: 1rem; line-height: 1.8; color: rgba(245,243,238,0.6); max-width: 440px; }
-
-.footer-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
-
-.footer-links a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  color: rgba(245,243,238,0.8);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  transition: color 0.2s;
-}
-
-.footer-links a::before { content: '→'; font-size: 0.8rem; color: var(--accent); }
-.footer-links a:hover { color: var(--accent-light); }
-
-.footer-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
-
-.footer-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.8rem;
-  border: 1px solid rgba(245,243,238,0.2);
-  color: rgba(245,243,238,0.5);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(245,243,238,0.1);
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-copy {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  color: rgba(245,243,238,0.3);
-}
-
-/* ── ANIMATIONS ───────────────────────────────────────────── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; padding: 7rem 2rem 4rem; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 7rem; }
   .hero-visual { display: none; }
-  .products-grid { grid-template-columns: 1fr 1fr; }
-  .product-card:nth-child(3n) { border-right: 1px solid var(--border); }
-  .product-card:nth-child(2n) { border-right: none; }
-  .product-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
-  .product-card:nth-last-child(-n+2) { border-bottom: none; }
-  .product-card:last-child { border-bottom: none; }
-  .approach-row { grid-template-columns: 1fr 1fr; }
-  .approach-item:nth-child(2n) { border-right: none; }
-  .approach-item { border-bottom: 1px solid var(--border); }
-  .approach-item:nth-last-child(-n+2) { border-bottom: none; }
-  .innovation-grid { grid-template-columns: 1fr; }
-  .innovation-main { border-right: none; border-bottom: 1px solid var(--border); }
-
-  /* CS responsive */
-  .cs-banner .cs-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .cs-banner-stats { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
-  .cs-stat { flex-direction: column; gap: 0.4rem; border-bottom: none; padding-bottom: 0; }
-  .cs-role .cs-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .cs-role-cards { grid-template-columns: 1fr 1fr; }
-  .cs-challenge .cs-inner { grid-template-columns: 1fr; }
-  .cs-challenge-cell:first-child { border-right: none; border-bottom: 1px solid var(--border); }
-  .cs-arch-cards { grid-template-columns: 1fr; }
-  .cs-outcomes-grid { grid-template-columns: repeat(2, 1fr); }
-  .cs-outcomes-qual { grid-template-columns: 1fr; }
-  .cs-skills-grid { grid-template-columns: 1fr 1fr; }
-  .cs-skill-cell:nth-child(3n) { border-right: 1px solid var(--border); }
-  .cs-skill-cell:nth-child(2n) { border-right: none; }
-  .cs-skill-cell:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
-  .cs-skill-cell:nth-last-child(-n+2) { border-bottom: none; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .value-strip-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .quick-nav { grid-template-columns: repeat(2,1fr); }
+  .qnav-item:nth-child(2n) { border-right: none; }
 }
-
-@media (max-width: 768px) {
-  nav { padding: 1rem 1.5rem; }
-  .nav-links { display: none; position: fixed; top: 58px; left: 0; right: 0; background: rgba(245,243,238,0.97); flex-direction: column; gap: 0; border-bottom: 1px solid var(--border); }
-  .nav-links.open { display: flex; }
-  .nav-links li a { display: block; padding: 1rem 2rem; border-bottom: 1px solid var(--border); }
-  .nav-toggle { display: flex; }
-  section { padding: 4rem 1.5rem; }
-  .hero { padding: 6rem 1.5rem 3rem; }
-  .products-grid { grid-template-columns: 1fr; }
-  .product-card { border-right: none !important; }
-  .product-card:nth-last-child(n) { border-bottom: 1px solid var(--border); }
-  .product-card:last-child { border-bottom: none; }
-  .featured-product { grid-template-columns: 1fr; }
-  .featured-product-content { border-right: none; border-bottom: 1px solid var(--border); }
-  .services-list { grid-template-columns: 1fr; }
-  .service-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
-  .service-item:last-child { border-bottom: none !important; }
-  .approach-row { grid-template-columns: 1fr; }
-  .approach-item { border-right: none; border-bottom: 1px solid var(--border); }
-  .approach-item:last-child { border-bottom: none; }
-  footer { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
-  .footer-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-
-  /* CS responsive mobile */
-  .cs-banner, .cs-role, .cs-challenge, .cs-arch, .cs-process, .cs-outcomes, .cs-skills { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .cs-inner { padding: 0; }
-  .cs-timeline::before { left: 80px; }
-  .cs-tl-item { grid-template-columns: 68px 32px 1fr; }
-  .cs-tl-phase-num { font-size: 1.4rem; }
-  .cs-role-cards { grid-template-columns: 1fr; }
-  .cs-arch-layers { gap: 0.6rem; }
-  .cs-skills-grid { grid-template-columns: 1fr; }
-  .cs-skill-cell { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
-  .cs-skill-cell:last-child { border-bottom: none !important; }
-  .cs-outcomes-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 480px) {
-  .hero-stats { gap: 2rem; }
-  .section-title { font-size: 2.2rem; }
-  .featured-product-content { padding: 2rem; }
-  .innovation-main { padding: 2rem; }
-  .service-item-inner { padding: 1.5rem; }
-  .cs-arch-diagram { padding: 1.5rem; }
-  .cs-outcomes-grid { grid-template-columns: 1fr; }
-}
+@media (max-width: 640px) { .quick-nav { grid-template-columns: 1fr; } .qnav-item { border-right: none; } }
 </style>
 </head>
-<body>
+<body class="page-wrap">
 
-<!-- ═══════════════════════════════════════════════════════
-     NAVIGATION
-═══════════════════════════════════════════════════════ -->
-<nav aria-label="Main navigation">
-  <a href="#" class="nav-logo">Irshan Khan</a>
-
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-    <span></span><span></span><span></span>
-  </button>
-
-  <ul class="nav-links" id="nav-links" role="list">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#innovation">Innovation</a></li>
-    <li><a href="#approach">Approach</a></li>
-    <li><a href="#casestudy">Case Study</a></li>
-  </ul>
+<!-- NAV -->
+<nav class="site-nav" role="navigation" aria-label="Main">
+  <a href="index.html" class="nav-logo">Irshan<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/products.html">Products</a>
+    <a href="pages/services.html">Services</a>
+    <a href="pages/innovation.html">Innovation</a>
+    <a href="pages/casestudy.html">Case Study</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/contact.html" class="nav-cta">Contact</a>
+  </div>
 </nav>
 
-
-<!-- ═══════════════════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════════════════ -->
-<section class="hero" aria-label="Introduction">
-  <div class="hero-text">
-    <p class="hero-eyebrow">Product · Program · Project</p>
-    <h1 class="hero-name">Irshan<br><em>Khan</em></h1>
-    <p class="hero-title">Product Leader &amp; Innovator</p>
-    <p class="hero-bio">Results-driven product leader with deep expertise in end-to-end product and service management — delivering innovative solutions across private wireless networks, edge platforms, and intelligent location technologies.</p>
-    <a href="https://irshankhan.wordpress.com/resume/" target="_blank" rel="noopener noreferrer" class="hero-resume-link">View Full Resume</a>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num">34<span>+</span></div>
-        <div class="stat-label">Patents Filed</div>
+<!-- HERO -->
+<div style="background: var(--paper);">
+  <div class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Product · Program · Project</p>
+      <h1 class="hero-name">Irshan<em>Khan</em></h1>
+      <p class="hero-role">Product Leader &amp; Innovator</p>
+      <p class="hero-bio">Results-driven product leader with deep expertise in private wireless networks, edge computing platforms, and intelligent location technologies — turning complex technical systems into differentiated commercial products.</p>
+      <div class="hero-actions">
+        <a href="pages/products.html" class="btn btn-dark">View Products</a>
+        <a href="pages/casestudy.html" class="btn btn-outline">Read Case Study</a>
       </div>
-      <div>
-        <div class="stat-num">5<span>+</span></div>
-        <div class="stat-label">Product Lines Led</div>
-      </div>
-      <div>
-        <div class="stat-num">4G<span>/5G</span></div>
-        <div class="stat-label">Network Expertise</div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">34<span>+</span></div><div class="hero-stat-label">Patents Filed</div></div>
+        <div><div class="hero-stat-num">5<span>+</span></div><div class="hero-stat-label">Product Lines</div></div>
+        <div><div class="hero-stat-num">4G<span>/5G</span></div><div class="hero-stat-label">Network Depth</div></div>
       </div>
     </div>
-  </div>
-
-  <div class="hero-visual" aria-hidden="true">
-    <div class="hero-visual-bg"></div>
-    <div class="hero-card">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/irshan1.png?w=522" alt="Irshan Khan" class="hero-photo" loading="eager" width="400" height="340">
-      <div class="hero-card-body">
-        <p class="hero-card-quote">"Blending strategic product thinking with technical fluency, operational rigor, and an unwavering commitment to quality."</p>
-        <div class="hero-card-tag">Core philosophy</div>
-        <div class="hero-tags">
-          <span class="tag">Cloud-Native</span>
-          <span class="tag">4G / 5G</span>
-          <span class="tag">Edge Computing</span>
-          <span class="tag">Indoor Positioning</span>
-          <span class="tag">ISO 9001</span>
-          <span class="tag">Agile / Scrum</span>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/irshan1.png?w=522" alt="Irshan Khan" class="hero-photo" loading="eager">
+        <div class="hero-card-body">
+          <p class="hero-card-quote">"Blending strategic product thinking with technical fluency, operational rigor, and an unwavering commitment to quality."</p>
+          <div class="hero-card-byline">Core philosophy</div>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════
-     01 · PRODUCT PORTFOLIO
-═══════════════════════════════════════════════════════ -->
-<div id="products" data-section="products">
-<section aria-labelledby="products-heading">
-
-  <div class="section-header reveal">
-    <span class="section-num">01</span>
-    <h2 class="section-title" id="products-heading">Product <em>Portfolio</em></h2>
-    <div class="section-line" aria-hidden="true"></div>
-  </div>
-
-  <div class="featured-product reveal">
-    <div class="featured-product-content">
-      <p class="featured-label">Featured Product</p>
-      <h3 class="featured-title">Smart Home<br>Tracking</h3>
-      <p class="featured-desc">Integrates BLE trackers, home automation devices, advanced notification systems, and voice assistant capabilities to enhance convenience, security, and efficiency in modern households — including native Amazon Alexa integration for voice-driven control.</p>
-      <div class="deliverables">
-        <span class="deliverable-pill">Mobile Application</span>
-        <span class="deliverable-pill">Amazon Alexa Skill MVP</span>
-        <span class="deliverable-pill">Delivered On Time</span>
-      </div>
-      <a href="https://irshankhan.wordpress.com/smarthometracking/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top: 2rem;">More Details</a>
-    </div>
-    <div class="featured-product-visual">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/12/the-smart-home-tracking-solution-integrates-ble-trackers-home-automation.png" alt="Smart Home Tracking Solution diagram" loading="lazy">
-    </div>
-  </div>
-
-  <div class="products-grid reveal">
-
-    <article class="product-card">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/privatewireless.png" alt="Private Wireless Network" class="product-card-img" loading="lazy">
-      <div class="product-card-inner">
-        <div class="product-name">Private Wireless Network</div>
-        <div class="product-tagline">Mission-Critical 4G/5G</div>
-        <p class="product-desc">Dedicated private wireless delivering deterministic latency, robust mobility, and full enterprise control for industrial automation and real-time analytics.</p>
-        <ul class="product-benefits">
-          <li>SIM-based authentication &amp; traffic isolation</li>
-          <li>QoS flows, slicing &amp; local breakout</li>
-          <li>Scalable to thousands of devices</li>
-        </ul>
-        <a href="https://www.dac.nokia.com/connectivity-solutions/private-wireless/" target="_blank" rel="noopener noreferrer" class="more-details">Nokia DAC Private Wireless</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/edgecomputeplatform.jpg" alt="Edge Application Platform" class="product-card-img" loading="lazy">
-      <div class="product-card-inner">
-        <div class="product-name">Edge Application Platform</div>
-        <div class="product-tagline">AI, Automation &amp; Intelligence</div>
-        <p class="product-desc">GPU-accelerated compute with Kubernetes orchestration enabling enterprises to run AI, computer vision, IoT orchestration, and digital twins at the edge.</p>
-        <ul class="product-benefits">
-          <li>Real-time AI/ML &amp; video analytics</li>
-          <li>Automated lifecycle management</li>
-          <li>Rich industrial application ecosystem</li>
-        </ul>
-        <a href="https://www.dac.nokia.com/" target="_blank" rel="noopener noreferrer" class="more-details">Nokia Edge Compute &amp; AI Platform</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-card-inner" style="padding-top: 2.5rem;">
-        <svg class="product-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <circle cx="22" cy="22" r="14"/>
-          <path d="M22 8 C16 14 16 30 22 36"/><path d="M8 22 h28"/><path d="M22 8 C28 14 28 30 22 36"/>
-        </svg>
-        <div class="product-name">Geofencing Solution</div>
-        <div class="product-tagline">Location-Aware Automation</div>
-        <p class="product-desc">Location-aware automation and targeted engagement through dynamic geofence-triggered actions for industrial and consumer applications.</p>
-        <ul class="product-benefits">
-          <li>Dynamic geofence trigger logic</li>
-          <li>Real-time location event processing</li>
-          <li>Cross-platform automation integration</li>
-        </ul>
-        <a href="https://irshankhan.wordpress.com/geofencing-solution/" target="_blank" rel="noopener noreferrer" class="more-details">More Details</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-card-inner" style="padding-top: 2.5rem;">
-        <svg class="product-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <rect x="8" y="10" width="28" height="24" rx="2"/>
-          <path d="M14 10 L14 6 M30 10 L30 6"/><path d="M14 22 h8 M14 28 h5"/><circle cx="30" cy="28" r="4"/>
-        </svg>
-        <div class="product-name">Indoor Positioning</div>
-        <div class="product-tagline">High-Accuracy Navigation</div>
-        <p class="product-desc">Reliable, high-accuracy indoor navigation for large, complex facilities using HERE Indoor Radio Mapper and Radio Map Admin Tool.</p>
-        <ul class="product-benefits">
-          <li>Sub-meter positioning accuracy</li>
-          <li>Multi-floor venue support</li>
-          <li>Offline &amp; low-power operation</li>
-        </ul>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.4rem;">
-          <a href="http://youtube.com/watch?v=Ysw63DPCYQM" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top:0;">HERE Indoor Radio Mapper</a>
-          <a href="https://www.youtube.com/watch?v=xndZaqI2cIo" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top:0;">Radio Map Admin Tool</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-card-inner" style="padding-top: 2.5rem;">
-        <svg class="product-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M22 8 L36 34 H8 Z"/>
-          <path d="M22 16 L30 30 H14 Z" fill="currentColor" fill-opacity="0.1"/>
-          <circle cx="22" cy="24" r="2" fill="currentColor"/>
-        </svg>
-        <div class="product-name">Indoor Parking Maps</div>
-        <div class="product-tagline">ADAS &amp; Automated Valet</div>
-        <p class="product-desc">High-precision indoor geometry and routing data enhancing ADAS and Automated Valet Parking systems for automotive OEM applications.</p>
-        <ul class="product-benefits">
-          <li>ADAS-grade precision geometry</li>
-          <li>Automated valet routing data</li>
-          <li>Automotive OEM integration</li>
-        </ul>
-        <a href="https://www.here.com/about/press-releases/here-adds-400-indoor-parking-garages-for-end-to-end-navigation-and-electric" target="_blank" rel="noopener noreferrer" class="more-details">More Details</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-card-inner" style="padding-top: 2.5rem;">
-        <svg class="product-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M10 22 C10 14 18 8 22 8 C26 8 34 14 34 22"/>
-          <circle cx="22" cy="22" r="6"/>
-          <path d="M22 28 L22 38"/><path d="M16 36 L28 36"/>
-        </svg>
-        <div class="product-name">Visual Positioning</div>
-        <div class="product-tagline">Camera-Based Indoor Location</div>
-        <p class="product-desc">Uses smartphone cameras to deliver precise indoor location for automotive companion apps, enabling seamless navigation without dedicated hardware.</p>
-        <ul class="product-benefits">
-          <li>Camera-only positioning</li>
-          <li>Automotive companion app ready</li>
-          <li>No additional infrastructure needed</li>
-        </ul>
-      </div>
-    </article>
-
-  </div>
-</section>
 </div>
 
-
-<!-- ═══════════════════════════════════════════════════════
-     02 · SERVICES PORTFOLIO
-═══════════════════════════════════════════════════════ -->
-<div id="services" data-section="services">
-<section aria-labelledby="services-heading">
-
-  <div class="section-header reveal">
-    <span class="section-num">02</span>
-    <h2 class="section-title" id="services-heading">Services <em>Portfolio</em></h2>
-    <div class="section-line" aria-hidden="true"></div>
+<!-- VALUE STRIP -->
+<div class="section-full" style="background:var(--ink); padding: clamp(3rem,5vw,5rem) var(--pad-x);">
+  <div class="value-strip-inner reveal">
+    <div class="value-headline">Building products that <em>move industries</em></div>
+    <div class="value-pills">
+      <span class="value-pill">Private Wireless Networks</span>
+      <span class="value-pill">Edge AI Platforms</span>
+      <span class="value-pill">Indoor Positioning</span>
+      <span class="value-pill">Kubernetes Orchestration</span>
+      <span class="value-pill">Platform Integration</span>
+      <span class="value-pill">34+ Patents</span>
+      <span class="value-pill">ISO 9001 Certified</span>
+      <span class="value-pill">Agile Leadership</span>
+    </div>
   </div>
-
-  <div class="services-list reveal">
-
-    <article class="service-item">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/12/cznmcy1wcml2yxrll3jhd3bpegvsx2ltywdlcy93zwjzaxrlx2nvbnrlbnqvbhivchgxmdg5nteylwltywdllwt3dnkzcxdylmpwzw.webp?w=1024" alt="Network activation" class="service-item-img" loading="lazy">
-      <div class="service-item-inner">
-        <div class="service-num">S — 01</div>
-        <div class="service-name">Network Activation</div>
-        <div class="service-subtitle">Seamless Network Deployment</div>
-        <p class="service-desc">Covers pre-deployment activities, license activation, configuration, remote installation, and integration support ensuring the network is operational and ready — with pre-configured hardware, connectivity verification, and acceptance testing.</p>
-        <a href="https://irshankhan.wordpress.com/servicesportfolio/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top: auto; padding-top: 1.5rem;">More Details</a>
-      </div>
-    </article>
-
-    <article class="service-item">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/12/in-the-telecommunications-industry-service-productization-is-a-key-enabler.png" alt="Field services" class="service-item-img" loading="lazy">
-      <div class="service-item-inner">
-        <div class="service-num">S — 02</div>
-        <div class="service-name">Field Services</div>
-        <div class="service-subtitle">Subcontractor Services at Scale</div>
-        <p class="service-desc">Enables efficient deployment execution across diverse regions through structured subcontractor management — with comprehensive training, standardized templates, and execution materials ensuring consistent, high-quality delivery.</p>
-        <a href="https://irshankhan.wordpress.com/field-services-in-telecom-networks/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top: auto; padding-top: 1.5rem;">More Details</a>
-      </div>
-    </article>
-
-    <article class="service-item">
-      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/efficiency-in-assessing-customer-requests-for-proposal-rfps-the-challenge-manually-assessing.png" alt="Operations and support" class="service-item-img" loading="lazy">
-      <div class="service-item-inner">
-        <div class="service-num">S — 03</div>
-        <div class="service-name">Operations &amp; Support</div>
-        <div class="service-subtitle">Scalable Network Operations Model</div>
-        <p class="service-desc">Structured tiered support framework combining self-service tools, partner-enabled on-site capabilities, and centralized technical support — with SLA tiers aligned to operational risk and continuity requirements.</p>
-        <a href="https://irshankhan.wordpress.com/network-operations-support-model-and-sla/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top: auto; padding-top: 1.5rem;">More Details</a>
-      </div>
-    </article>
-
-    <article class="service-item">
-      <div class="service-item-inner" style="padding-top: 3rem;">
-        <div class="service-num">S — 04</div>
-        <div class="service-name">Hardware &amp; Optimization</div>
-        <div class="service-subtitle">Reliability &amp; Performance Services</div>
-        <p class="service-desc">Hardware replacement services with pre-configured spares and SLA-backed advanced replacement, plus RF optimization through walk/drive test analysis — assessing KPIs including throughput, latency, and session success rates.</p>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:auto; padding-top:1.5rem;">
-          <a href="https://irshankhan.wordpress.com/hardware-services/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top:0;">Hardware Services</a>
-          <a href="https://irshankhan.wordpress.com/network-optimization-services/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top:0;">Optimization Service</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
 </div>
 
-
-<!-- ═══════════════════════════════════════════════════════
-     03 · INNOVATION & PROCESS
-═══════════════════════════════════════════════════════ -->
-<div id="innovation" data-section="innovation">
-<section aria-labelledby="innovation-heading">
-
-  <div class="section-header reveal">
-    <span class="section-num">03</span>
-    <h2 class="section-title" id="innovation-heading">Innovation &amp; <em>Process</em></h2>
-    <div class="section-line" aria-hidden="true"></div>
+<!-- FEATURED WORK -->
+<div class="section">
+  <div class="sec-head reveal">
+    <span class="sec-num">Featured</span>
+    <h2 class="sec-title">Selected <em>Work</em></h2>
+    <div class="sec-rule"></div>
   </div>
 
-  <div class="innovation-grid reveal">
-    <div class="innovation-main">
-      <p class="featured-label">Innovation Management</p>
-      <h3 class="featured-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Transforming Indoor Navigation</h3>
-      <p style="font-size: 1.05rem; line-height: 1.8; color: #4a4844; margin-bottom: 1.5rem;">Indoor environments break traditional navigation: GPS fails indoors, cellular signals lack precision, and multi-story positioning is unreliable. Developed a suite of breakthrough patented innovations — including Mirror Beacon Technology — leveraging existing Wi-Fi and Bluetooth infrastructure for accurate, scalable indoor navigation.</p>
-      <p style="font-size: 1.05rem; line-height: 1.8; color: #4a4844;">Solutions operate on low-memory devices without large servers, supporting offline and decentralized positioning — ideal for healthcare, logistics, retail, smart homes, and consumer navigation.</p>
-      <a href="https://irshankhan.wordpress.com/innovation-management/" target="_blank" rel="noopener noreferrer" class="more-details">More Details</a>
+  <div class="featured-grid reveal" data-stagger>
 
-      <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
-        <p class="featured-label" style="margin-bottom: 1.2rem;">Process Innovation</p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-          <div style="padding: 1.5rem; border: 1px solid var(--border);">
-            <div style="font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">AI-Driven RFP Evaluation</div>
-            <p style="font-size: 0.9rem; line-height: 1.7; color: #4a4844;">LLM-powered RFP assessment integrating product documentation and 3GPP standards — reducing response time while ensuring accuracy and consistency.</p>
-          </div>
-          <div style="padding: 1.5rem; border: 1px solid var(--border);">
-            <div style="font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.6rem;">Zero Touch Deployment</div>
-            <p style="font-size: 0.9rem; line-height: 1.7; color: #4a4844;">Automated order management, license activation, network planning, and application deployment — empowering customers and partners with self-serve tools.</p>
-            <a href="https://irshankhan.wordpress.com/direct-delivery/" target="_blank" rel="noopener noreferrer" class="more-details" style="margin-top: 1rem;">More Details</a>
+    <div class="feat-card">
+      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/privatewireless.png" alt="Private Wireless" class="feat-card-img" loading="lazy">
+      <div class="feat-card-body">
+        <div class="feat-card-label">Product</div>
+        <h3 class="feat-card-title">Private Wireless Network</h3>
+        <p class="feat-card-desc">Mission-critical 4G/5G platform delivering deterministic latency, SIM-based authentication, and enterprise-grade QoS for industrial automation and real-time analytics.</p>
+        <div class="feat-card-footer">
+          <div class="tags"><span class="tag">5G</span><span class="tag">Industrial</span></div>
+          <a href="pages/products.html" class="link-arrow">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-card">
+      <img src="https://irshankhan.wordpress.com/wp-content/uploads/2025/11/edgecomputeplatform.jpg" alt="Edge Platform" class="feat-card-img" loading="lazy">
+      <div class="feat-card-body">
+        <div class="feat-card-label">Product</div>
+        <h3 class="feat-card-title">Edge Application Platform</h3>
+        <p class="feat-card-desc">GPU-accelerated, Kubernetes-orchestrated compute enabling AI, computer vision, and digital twins at the network edge.</p>
+        <div class="feat-card-footer">
+          <div class="tags"><span class="tag">Edge AI</span><span class="tag">Kubernetes</span></div>
+          <a href="pages/products.html" class="link-arrow">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-card">
+      <div class="feat-card-body" style="padding-top: 3rem; justify-content: space-between; min-height: 340px;">
+        <div>
+          <div class="feat-card-label">Case Study</div>
+          <h3 class="feat-card-title">Order-to-Delivery Platform Transformation</h3>
+          <p class="feat-card-desc">Led full product strategy for integrating 8 enterprise systems — from fragmented manual processes to 70%+ automated order flow.</p>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1rem;">
+            <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:rgba(200,65,10,0.07);border:1px solid rgba(200,65,10,0.18);padding:0.28rem 0.72rem;">−40% Cycle Time</span>
+            <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:rgba(200,65,10,0.07);border:1px solid rgba(200,65,10,0.18);padding:0.28rem 0.72rem;">70%+ Automated</span>
           </div>
         </div>
+        <div class="feat-card-footer" style="margin-top:2rem;">
+          <div class="tags"><span class="tag">Platform</span><span class="tag">Integration</span></div>
+          <a href="pages/casestudy.html" class="link-arrow">Read More</a>
+        </div>
       </div>
     </div>
 
-    <div class="innovation-sidebar">
-      <div class="patent-counter">34</div>
-      <div class="patent-label">Patents Filed</div>
-      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: rgba(245,243,238,0.7); line-height: 1.7; margin-bottom: 1.5rem;">Including the breakthrough Mirror Beacon Technology for scalable indoor navigation.</p>
-      <div class="innovation-items">
-        <div class="innovation-item">
-          <div class="innovation-item-title">Cost Efficiency</div>
-          <div class="innovation-item-desc">Uses existing BLE and Wi-Fi networks, eliminating dedicated infrastructure costs</div>
-        </div>
-        <div class="innovation-item">
-          <div class="innovation-item-title">Reliability</div>
-          <div class="innovation-item-desc">Data compression, quality monitoring, and multi-story alignment for precision</div>
-        </div>
-        <div class="innovation-item">
-          <div class="innovation-item-title">Device-Friendly</div>
-          <div class="innovation-item-desc">Optimized for wearables, IoT devices, and limited-connectivity environments</div>
-        </div>
-        <div class="innovation-item">
-          <div class="innovation-item-title">Broad Application</div>
-          <div class="innovation-item-desc">Healthcare, logistics, retail, smart homes, automotive, and consumer navigation</div>
-        </div>
-      </div>
-    </div>
   </div>
 
-</section>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════════════
-     04 · LEADERSHIP APPROACH
-═══════════════════════════════════════════════════════ -->
-<div id="approach" data-section="approach">
-<section aria-labelledby="approach-heading">
-
-  <div class="section-header reveal">
-    <span class="section-num">04</span>
-    <h2 class="section-title" id="approach-heading">Leadership <em>Approach</em></h2>
-    <div class="section-line" aria-hidden="true"></div>
-  </div>
-
-  <div class="approach-row reveal">
-    <div class="approach-item">
-      <div class="approach-num">01</div>
-      <div class="approach-title">Strategic Clarity</div>
-      <p class="approach-desc">Transparent roadmaps and continuous discovery keep teams aligned with product vision and business outcomes — removing ambiguity at every level.</p>
-    </div>
-    <div class="approach-item">
-      <div class="approach-num">02</div>
-      <div class="approach-title">Technical Fluency</div>
-      <p class="approach-desc">Deep architectural awareness enables meaningful collaboration with engineering teams, driving decisions that balance velocity with technical integrity.</p>
-    </div>
-    <div class="approach-item">
-      <div class="approach-num">03</div>
-      <div class="approach-title">Quality by Design</div>
-      <p class="approach-desc">Integrating testability, automation, and observability into the development lifecycle — validated through ISO 9001:2015 audit at HERE Technologies.</p>
-    </div>
-    <div class="approach-item">
-      <div class="approach-num">04</div>
-      <div class="approach-title">Operational Rigor</div>
-      <p class="approach-desc">Disciplined execution with predictable delivery rhythms, clear escalation paths, and SLA-backed frameworks for mission-critical operations.</p>
-    </div>
-  </div>
-
-</section>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════════════
-     05 · CASE STUDY — ORDER-TO-DELIVERY PLATFORM
-═══════════════════════════════════════════════════════ -->
-<div id="casestudy" data-section="casestudy">
-<section id="casestudy" aria-labelledby="cs-heading">
-
-<!-- BANNER -->
-<div class="cs-banner">
-  <div class="cs-inner">
-    <div class="cs-banner-left reveal">
-      <p class="cs-eyebrow">Case Study · Platform Transformation</p>
-      <h2 class="cs-banner-title" id="cs-heading">
-        Order-to-Delivery<br>
-        <em>Platform Implementation</em>
-      </h2>
-      <p class="cs-banner-desc">Led end-to-end product strategy for a complex enterprise platform integrating private wireless network provisioning and cloud-native Kubernetes infrastructure — transforming fragmented manual processes into a fully automated, integrated system serving sales, operations, finance, and supply chain.</p>
-    </div>
-    <div class="cs-banner-stats reveal">
-      <div class="cs-stat">
-        <div class="cs-stat-num">−40<span style="font-size:1.4rem">%</span></div>
-        <div class="cs-stat-label">Order-to-delivery<br>cycle time (Year 1 target)</div>
-      </div>
-      <div class="cs-stat">
-        <div class="cs-stat-num">70<span style="font-size:1.4rem">%+</span></div>
-        <div class="cs-stat-label">Standard orders<br>fully automated</div>
-      </div>
-      <div class="cs-stat">
-        <div class="cs-stat-num">8</div>
-        <div class="cs-stat-label">Systems unified under<br>one integration layer</div>
-      </div>
-      <div class="cs-stat">
-        <div class="cs-stat-num">+30<span style="font-size:1.4rem">%</span></div>
-        <div class="cs-stat-label">First-time-right<br>configuration rate</div>
-      </div>
-    </div>
+  <div style="display:flex; justify-content:flex-end; margin-top:1.5rem;">
+    <a href="pages/products.html" class="link-arrow">View all products</a>
   </div>
 </div>
 
-<!-- ROLE STRIP -->
-<div class="cs-role">
-  <div class="cs-inner">
-    <div class="reveal">
-      <div class="cs-role-label">My Role</div>
-      <div class="cs-role-title">Product Manager<br>&amp; Programme Lead</div>
-    </div>
-    <div class="cs-role-cards reveal">
-      <div class="cs-role-card">
-        <div class="cs-role-card-title">Product Strategy &amp; Vision</div>
-        <div class="cs-role-card-text">Defined the 5-pillar transformation mandate — automation, centralisation, integration, data governance, tooling maturity — and maintained alignment across all phases and stakeholder groups.</div>
-      </div>
-      <div class="cs-role-card">
-        <div class="cs-role-card-title">Stakeholder Leadership</div>
-        <div class="cs-role-card-text">Primary interface between Sales, Finance, Operations, Delivery Engineering, and Supply Chain. Ran weekly steering cadences and owned the RACI, escalation paths, and dependency resolution.</div>
-      </div>
-      <div class="cs-role-card">
-        <div class="cs-role-card-title">Requirements &amp; System Design</div>
-        <div class="cs-role-card-text">Authored functional requirements, API contracts, data governance policy, and process flows for 8 integrated systems including ERP, ITSM, private wireless provisioning, and Kubernetes.</div>
-      </div>
-    </div>
+<!-- QUICK NAV -->
+<div class="section" style="padding-top:0;">
+  <div class="sec-head reveal"><span class="sec-num">Explore</span><h2 class="sec-title">Navigate the <em>Portfolio</em></h2><div class="sec-rule"></div></div>
+  <div class="quick-nav reveal" data-stagger>
+    <a href="pages/products.html" class="qnav-item">
+      <span class="qnav-num">01</span>
+      <span class="qnav-label">Products</span>
+      <span class="qnav-desc">Private wireless, edge platforms, positioning, smart home</span>
+    </a>
+    <a href="pages/services.html" class="qnav-item">
+      <span class="qnav-num">02</span>
+      <span class="qnav-label">Services</span>
+      <span class="qnav-desc">Activation, field ops, support, hardware, optimisation</span>
+    </a>
+    <a href="pages/innovation.html" class="qnav-item">
+      <span class="qnav-num">03</span>
+      <span class="qnav-label">Innovation</span>
+      <span class="qnav-desc">34+ patents, Mirror Beacon technology, AI-driven processes</span>
+    </a>
+    <a href="pages/casestudy.html" class="qnav-item">
+      <span class="qnav-num">04</span>
+      <span class="qnav-label">Case Study</span>
+      <span class="qnav-desc">Order-to-delivery platform — full programme leadership</span>
+    </a>
+    <a href="pages/about.html" class="qnav-item">
+      <span class="qnav-num">05</span>
+      <span class="qnav-label">About</span>
+      <span class="qnav-desc">Background, philosophy, and leadership approach</span>
+    </a>
   </div>
 </div>
 
-<!-- CHALLENGE & APPROACH -->
-<div class="cs-challenge">
-  <div class="cs-inner">
-    <div class="section-header reveal" style="padding: 0 0 3rem;">
-      <span class="section-num">05.1</span>
-      <h3 class="section-title" style="font-size: clamp(1.8rem,3vw,2.8rem);">Challenge &amp; <em>Approach</em></h3>
-      <div class="section-line"></div>
-    </div>
-    <div class="reveal" style="border: 1px solid var(--border);">
-      <div style="display: grid; grid-template-columns: 1fr 1fr;">
-        <div class="cs-challenge-cell">
-          <div class="cs-cell-label">The Problem</div>
-          <h4 class="cs-cell-heading">Eight isolated systems with no shared data layer</h4>
-          <p class="cs-cell-text">Every handoff was manual, every status update was an email, and configuration errors were discovered at delivery — not at intake. Sequential approval chains added days to every order cycle.</p>
-          <ul class="cs-pain-list">
-            <li>Manual data entry duplicated across 5+ tools per order</li>
-            <li>Sequential approvals creating multi-day bottlenecks</li>
-            <li>CIQ and BoM errors discovered at delivery, not intake</li>
-            <li>No real-time visibility — order status tracked in spreadsheets</li>
-            <li>Finance and supply chain engaged too late in the cycle</li>
-            <li>Zero KPIs, SLA tracking, or continuous improvement loop</li>
-            <li>Tribal knowledge with no SOPs or audit trail</li>
-          </ul>
-        </div>
-        <div class="cs-challenge-cell">
-          <div class="cs-cell-label">The Approach</div>
-          <h4 class="cs-cell-heading">Integration-first, automation-driven, governance-grounded</h4>
-          <p class="cs-cell-text">Rather than replacing systems, I designed an integration-first strategy: build an API middleware and master data layer connecting all existing tools, then layer automation and workflow governance on top.</p>
-          <ul class="cs-pain-list">
-            <li>Discovery sprint mapping all processes and dependencies first</li>
-            <li>Quick-win phase to prove value early and build confidence</li>
-            <li>Event-driven architecture with shared master data repository</li>
-            <li>Rule-based auto-approval replacing sequential sign-off chains</li>
-            <li>CIQ/BoM engine embedded at offer creation, not delivery</li>
-            <li>Centralised reporting cockpit as the single visibility layer</li>
-            <li>Phased rollout with measurable KPIs at each milestone gate</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ARCHITECTURE -->
-<div class="cs-arch">
-  <div class="cs-inner">
-    <div class="section-header reveal" style="padding: 0 0 3rem;">
-      <span class="section-num" style="color: var(--accent-light);">05.2</span>
-      <h3 class="section-title" style="font-size: clamp(1.8rem,3vw,2.8rem); color: var(--paper);">System <em style="color:var(--accent-light)">Architecture</em></h3>
-      <div class="section-line" style="background:rgba(255,255,255,0.1);"></div>
-    </div>
-
-    <div class="cs-arch-diagram reveal">
-      <p class="cs-arch-sub">Target Platform Architecture — 8 Systems, 1 Integration Layer</p>
-      <div class="cs-arch-layers">
-
-        <div class="cs-arch-layer">
-          <div class="cs-layer-label" style="color:var(--accent-light)">ENTRY</div>
-          <div class="cs-layer-nodes">
-            <div class="cs-node hl" style="max-width:280px; margin:0 auto; flex:none; width:100%;">
-              <div class="cs-node-name hl">Order &amp; Offer Tool</div>
-              <div class="cs-node-desc">Single entry point for all orders</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cs-arch-arrow">↓</div>
-
-        <div class="cs-arch-layer">
-          <div class="cs-layer-label" style="color:var(--accent-light)">INTEGRATION</div>
-          <div class="cs-layer-nodes">
-            <div class="cs-node hl">
-              <div class="cs-node-name hl">API Middleware</div>
-              <div class="cs-node-desc">Event bus, routing, auth</div>
-            </div>
-            <div class="cs-node hl">
-              <div class="cs-node-name hl">Master Data Repo</div>
-              <div class="cs-node-desc">Single source of truth</div>
-            </div>
-            <div class="cs-node hl">
-              <div class="cs-node-name hl">Workflow Engine</div>
-              <div class="cs-node-desc">Auto-approval, state machine</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cs-arch-arrow">↓</div>
-
-        <div class="cs-arch-layer">
-          <div class="cs-layer-label">CORE</div>
-          <div class="cs-layer-nodes">
-            <div class="cs-node"><div class="cs-node-name">ERP (Sales Orders)</div><div class="cs-node-desc">SO, demand release, invoicing</div></div>
-            <div class="cs-node"><div class="cs-node-name">Supply Chain ERP</div><div class="cs-node-desc">Vendors, stock, export control</div></div>
-            <div class="cs-node"><div class="cs-node-name">ITSM Platform</div><div class="cs-node-desc">Approvals, tickets, change mgmt</div></div>
-            <div class="cs-node"><div class="cs-node-name">Delivery Tracker</div><div class="cs-node-desc">Order tracking, subscriptions</div></div>
-          </div>
-        </div>
-
-        <div class="cs-arch-arrow">↓</div>
-
-        <div class="cs-arch-layer">
-          <div class="cs-layer-label">PROVISION</div>
-          <div class="cs-layer-nodes">
-            <div class="cs-node"><div class="cs-node-name">CIQ / BoM Engine</div><div class="cs-node-desc">Config validation, BOM generation</div></div>
-            <div class="cs-node"><div class="cs-node-name">Private Wireless API</div><div class="cs-node-desc">RAN, 5G Core, SIM provisioning</div></div>
-            <div class="cs-node"><div class="cs-node-name">Kubernetes API</div><div class="cs-node-desc">Cluster provisioning, RBAC</div></div>
-          </div>
-        </div>
-
-        <div class="cs-arch-arrow">↓</div>
-
-        <div class="cs-arch-layer">
-          <div class="cs-layer-label">OUTPUT</div>
-          <div class="cs-layer-nodes">
-            <div class="cs-node"><div class="cs-node-name">Notification Engine</div><div class="cs-node-desc">Automated customer comms</div></div>
-            <div class="cs-node"><div class="cs-node-name">Logistics (3PL)</div><div class="cs-node-desc">Shipment, POD, tracking</div></div>
-            <div class="cs-node"><div class="cs-node-name">Reporting Cockpit</div><div class="cs-node-desc">Real-time KPIs, SLA tracking</div></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="cs-arch-cards reveal">
-      <div class="cs-arch-card">
-        <div class="cs-arch-card-num">01</div>
-        <div class="cs-arch-card-title">API Middleware &amp; Event Bus</div>
-        <div class="cs-arch-card-text">Designed the integration layer connecting all 8 systems via REST APIs and an async event model. Every state change publishes an event; all systems consume from a shared authoritative data source rather than maintaining local copies.</div>
-      </div>
-      <div class="cs-arch-card">
-        <div class="cs-arch-card-num">02</div>
-        <div class="cs-arch-card-title">Private Wireless Provisioning</div>
-        <div class="cs-arch-card-text">Defined the API contract for automated 5G RAN, core network (UPF/AMF/SMF), and SIM profile provisioning. Configuration validated at offer creation; provisioning triggered automatically on order approval.</div>
-      </div>
-      <div class="cs-arch-card">
-        <div class="cs-arch-card-num">03</div>
-        <div class="cs-arch-card-title">Kubernetes Platform API</div>
-        <div class="cs-arch-card-text">Specified the on-premise Kubernetes cluster lifecycle API: node provisioning, RBAC policies, namespace management, addon deployment, and secure kubeconfig delivery — fully integrated into the order-to-delivery flow.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PROCESS TIMELINE -->
-<div class="cs-process">
-  <div class="cs-inner">
-    <div class="section-header reveal" style="padding: 0 0 3rem;">
-      <span class="section-num">05.3</span>
-      <h3 class="section-title" style="font-size: clamp(1.8rem,3vw,2.8rem);">How I <em>Worked</em></h3>
-      <div class="section-line"></div>
-    </div>
-    <div class="cs-timeline">
-
-      <div class="cs-tl-item reveal">
-        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P0</div><div class="cs-tl-phase-label">Discovery</div></div>
-        <div class="cs-tl-dot"></div>
-        <div class="cs-tl-content">
-          <div class="cs-tl-title">Stakeholder mapping, process archaeology &amp; backlog formation</div>
-          <p class="cs-tl-text">Ran structured interviews across Sales, Finance, Operations, Delivery, and Supply Chain. Mapped every process step, data flow, and system handoff. Produced a dependency diagram exposing the eight critical blockers to automation — used as the single alignment artefact for all subsequent decisions.</p>
-          <div class="cs-tl-tags"><span class="cs-tl-tag">Stakeholder Interviews</span><span class="cs-tl-tag">Process Mapping</span><span class="cs-tl-tag">Dependency Analysis</span><span class="cs-tl-tag">Backlog Prioritisation</span></div>
-        </div>
-      </div>
-
-      <div class="cs-tl-item reveal">
-        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P1</div><div class="cs-tl-phase-label">Foundation</div></div>
-        <div class="cs-tl-dot"></div>
-        <div class="cs-tl-content">
-          <div class="cs-tl-title">Requirements definition, API design &amp; master data governance</div>
-          <p class="cs-tl-text">Authored the master data model, defined system-of-record ownership per domain, and wrote functional API specifications for the integration middleware. Established the GIC code mapping framework aligning product categories with financial reporting — a blocker that had previously distorted margin data.</p>
-          <div class="cs-tl-tags"><span class="cs-tl-tag">API Specification</span><span class="cs-tl-tag">Data Governance</span><span class="cs-tl-tag">Financial Modelling</span><span class="cs-tl-tag">RACI Design</span></div>
-        </div>
-      </div>
-
-      <div class="cs-tl-item reveal">
-        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P2</div><div class="cs-tl-phase-label">Automation</div></div>
-        <div class="cs-tl-dot"></div>
-        <div class="cs-tl-content">
-          <div class="cs-tl-title">Workflow engine, CIQ/BoM consolidation &amp; auto-approval rules</div>
-          <p class="cs-tl-text">Translated approval governance into machine-readable rules: standard orders with pre-approved templates auto-approve instantly; custom orders route to parallel human approval lanes. Eliminated the sequential bottleneck adding 3–5 days to every order cycle.</p>
-          <div class="cs-tl-tags"><span class="cs-tl-tag">Workflow Design</span><span class="cs-tl-tag">Business Rules</span><span class="cs-tl-tag">Configuration Management</span><span class="cs-tl-tag">BoM Automation</span></div>
-        </div>
-      </div>
-
-      <div class="cs-tl-item reveal">
-        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P3</div><div class="cs-tl-phase-label">Provisioning</div></div>
-        <div class="cs-tl-dot"></div>
-        <div class="cs-tl-content">
-          <div class="cs-tl-title">Private wireless &amp; Kubernetes platform API integration</div>
-          <p class="cs-tl-text">Defined end-to-end provisioning contracts for both platform types. Private wireless: RAN configuration, 5G core function setup, and SIM profile activation triggered automatically from the validated CIQ. Kubernetes: cluster lifecycle from node allocation to RBAC and addon deployment, with encrypted kubeconfig delivery.</p>
-          <div class="cs-tl-tags"><span class="cs-tl-tag">5G / Private Wireless</span><span class="cs-tl-tag">Kubernetes</span><span class="cs-tl-tag">API Contracts</span><span class="cs-tl-tag">Infrastructure Automation</span></div>
-        </div>
-      </div>
-
-      <div class="cs-tl-item reveal">
-        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P4</div><div class="cs-tl-phase-label">Visibility</div></div>
-        <div class="cs-tl-dot"></div>
-        <div class="cs-tl-content">
-          <div class="cs-tl-title">Centralised order cockpit, KPI framework &amp; continuous improvement</div>
-          <p class="cs-tl-text">Designed the reporting layer aggregating all 8 systems into a single real-time dashboard. Defined the KPI framework — cycle time, first-time-right, automation rate, invoice accuracy — and established the governance model for ongoing measurement and improvement sprints.</p>
-          <div class="cs-tl-tags"><span class="cs-tl-tag">KPI Design</span><span class="cs-tl-tag">Dashboard Architecture</span><span class="cs-tl-tag">Continuous Improvement</span><span class="cs-tl-tag">Change Management</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- OUTCOMES -->
-<div class="cs-outcomes">
-  <div class="cs-inner">
-    <div class="section-header reveal" style="padding: 0 0 3rem;">
-      <span class="section-num" style="color:rgba(255,255,255,0.45)">05.4</span>
-      <h3 class="section-title" style="font-size: clamp(1.8rem,3vw,2.8rem); color:#fff;">Outcomes &amp; <em style="color:rgba(255,255,255,0.7)">Impact</em></h3>
-      <div class="section-line" style="background:rgba(255,255,255,0.2);"></div>
-    </div>
-    <div class="cs-outcomes-grid reveal">
-      <div class="cs-outcome-cell"><div class="cs-outcome-num">−40<span style="font-size:1.2rem">%</span></div><div class="cs-outcome-label">Cycle time reduction<br>(Year 1 target)</div></div>
-      <div class="cs-outcome-cell"><div class="cs-outcome-num">70<span style="font-size:1.2rem">%+</span></div><div class="cs-outcome-label">Standard orders<br>fully automated</div></div>
-      <div class="cs-outcome-cell"><div class="cs-outcome-num">+30<span style="font-size:1.2rem">%</span></div><div class="cs-outcome-label">First-time-right<br>configuration rate</div></div>
-      <div class="cs-outcome-cell"><div class="cs-outcome-num">8</div><div class="cs-outcome-label">Systems on one<br>master data model</div></div>
-    </div>
-    <div class="cs-outcomes-qual reveal">
-      <div class="cs-qual-item">
-        <div class="cs-qual-title">Parallel Approvals Replaced Sequential Bottleneck</div>
-        <div class="cs-qual-text">Multi-day sequential chains redesigned into parallel, rule-gated workflows. Standard orders auto-approve in seconds; complex orders run concurrent approval tracks with no unnecessary waiting.</div>
-      </div>
-      <div class="cs-qual-item">
-        <div class="cs-qual-title">Single Source of Truth Across All Teams</div>
-        <div class="cs-qual-text">Replaced 8 disconnected data stores with a master data repository. Every system publishes and consumes from one canonical record — eliminating data conflicts and tribal knowledge.</div>
-      </div>
-      <div class="cs-qual-item">
-        <div class="cs-qual-title">Finance &amp; Supply Chain Integrated Upstream</div>
-        <div class="cs-qual-text">Moved credit validation and supply chain readiness checks to offer creation — not delivery. Finance and procurement now have real-time data at the point of commitment.</div>
-      </div>
-      <div class="cs-qual-item">
-        <div class="cs-qual-title">Real-Time Operational Visibility</div>
-        <div class="cs-qual-text">Replaced spreadsheet-tracked order status with a centralised cockpit delivering live KPIs, SLA adherence, delivery capacity, and invoice accuracy to all stakeholder groups simultaneously.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SKILLS DEMONSTRATED -->
-<div class="cs-skills">
-  <div class="cs-inner">
-    <div class="section-header reveal" style="padding: 0 0 3rem;">
-      <span class="section-num">05.5</span>
-      <h3 class="section-title" style="font-size: clamp(1.8rem,3vw,2.8rem);">Skills <em>Demonstrated</em></h3>
-      <div class="section-line"></div>
-    </div>
-    <div class="cs-skills-grid reveal">
-      <div class="cs-skill-cell">
-        <div class="cs-skill-name">Product Strategy</div>
-        <div class="cs-skill-text">Defined the transformation mandate, KPI framework, and phased roadmap. Balanced short-term quick wins against long-term architectural investment, maintaining stakeholder alignment through a multi-phase programme.</div>
-        <div class="cs-skill-tags"><span class="cs-skill-tag">Roadmapping</span><span class="cs-skill-tag">OKRs</span><span class="cs-skill-tag">Executive Alignment</span></div>
-      </div>
-      <div class="cs-skill-cell">
-        <div class="cs-skill-name">Stakeholder Management</div>
-        <div class="cs-skill-text">Managed competing priorities across Sales, Finance, Operations, Delivery Engineering, and Supply Chain. Ran steering committees, owned the RACI, and navigated complex organisational dynamics.</div>
-        <div class="cs-skill-tags"><span class="cs-skill-tag">Cross-functional Leadership</span><span class="cs-skill-tag">RACI</span><span class="cs-skill-tag">Executive Communication</span></div>
-      </div>
-      <div class="cs-skill-cell">
-        <div class="cs-skill-name">Requirements Engineering</div>
-        <div class="cs-skill-text">Authored functional specs, API contracts, data governance policies, and workflow definitions for a complex multi-system integration. Translated ambiguous business needs into developer-ready specifications.</div>
-        <div class="cs-skill-tags"><span class="cs-skill-tag">API Specification</span><span class="cs-skill-tag">User Stories</span><span class="cs-skill-tag">Acceptance Criteria</span></div>
-      </div>
-      <div class="cs-skill-cell">
-        <div class="cs-skill-name">Systems Thinking</div>
-        <div class="cs-skill-text">Designed the end-to-end system architecture including integration middleware, master data model, event-driven workflows, and provisioning APIs for private wireless and Kubernetes platforms.</div>
-        <div class="cs-skill-tags"><span class="cs-skill-tag">Architecture Design</span><span class="cs-skill-tag">API Design</span><span class="cs-skill-tag">Data Modelling</span></div>
-      </div>
-      <div class="cs-skill-cell">
-        <div class="cs-skill-name">Technical Domain Depth</div>
-        <div class="cs-skill-text">Working knowledge of private 5G/LTE networks (RAN, core, SIM), Kubernetes cluster lifecycle, ERP integration, and enterprise supply chain — sufficient to write meaningful API contracts and challenge engineering trade-offs.</div>
-        <div class="cs-skill-tags"><span class="cs-skill-tag">5G / Private Wireless</span><span class="cs-skill-tag">Kubernetes</span><span class="cs-skill-tag">ERP Systems</span></div>
-      </div>
-      <div class="cs-skill-cell">
-        <div class="cs-skill-name">Data-Driven Delivery</div>
-        <div class="cs-skill-text">Designed the KPI framework from scratch — cycle time, first-time-right, automation rate, invoice accuracy. Built the reporting cockpit architecture and established the continuous improvement governance model.</div>
-        <div class="cs-skill-tags"><span class="cs-skill-tag">KPI Design</span><span class="cs-skill-tag">Analytics</span><span class="cs-skill-tag">Process Improvement</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</section>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════════════════ -->
-<footer>
-  <div class="footer-left">
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div>
     <div class="footer-name">Irshan<br><em>Khan</em></div>
-    <p class="footer-bio">Results-driven product leader building the digital foundation for automation, AI-driven operations, and mission-critical industrial workflows. Available for product leadership and consulting engagements.</p>
+    <p class="footer-bio">Product leader building the digital foundation for automation, AI operations, and mission-critical industrial workflows.</p>
   </div>
-  <div class="footer-right">
-    <div class="footer-label">Connect</div>
+  <div>
+    <div class="footer-col-label">Navigate</div>
     <ul class="footer-links">
-      <li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener noreferrer">Portfolio (WordPress)</a></li>
-      <li><a href="https://irshankhan.wordpress.com/resume/" target="_blank" rel="noopener noreferrer">Resume</a></li>
-      <li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+      <li><a href="pages/products.html">Products</a></li>
+      <li><a href="pages/services.html">Services</a></li>
+      <li><a href="pages/innovation.html">Innovation</a></li>
+      <li><a href="pages/casestudy.html">Case Study</a></li>
+      <li><a href="pages/about.html">About</a></li>
     </ul>
-    <div class="footer-label">Expertise</div>
-    <div class="footer-tags">
-      <span class="footer-tag">Private Wireless</span>
-      <span class="footer-tag">Edge Computing</span>
-      <span class="footer-tag">Product Strategy</span>
-      <span class="footer-tag">Indoor Navigation</span>
-      <span class="footer-tag">Agile Leadership</span>
-      <span class="footer-tag">Platform Integration</span>
+    <div class="footer-col-label">Connect</div>
+    <ul class="footer-links">
+      <li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener">Portfolio Blog</a></li>
+      <li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://irshankhan.wordpress.com/resume/" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+    <div class="tags footer-tags">
+      <span class="tag tag-dark">Private Wireless</span><span class="tag tag-dark">Edge Computing</span><span class="tag tag-dark">34+ Patents</span>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">&copy; <span id="year"></span> Irshan Khan — Product, Program &amp; Project Manager</span>
+    <span class="footer-copy">&copy; <span id="footer-year"></span> Irshan Khan — Product, Program &amp; Project Manager</span>
     <span class="footer-copy">irshankhan.github.io</span>
   </div>
 </footer>
 
-<script>
-/* ============================================================
-   MAIN JAVASCRIPT — merged portfolio
-============================================================ */
-(function () {
-  'use strict';
-
-  // ── Mobile nav toggle ────────────────────────────────────
-  const toggle   = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      toggle.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-    document.addEventListener('click', (e) => {
-      if (!toggle.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  // ── Scroll-reveal ────────────────────────────────────────
-  const reveals = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window && reveals.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.07 });
-    reveals.forEach(el => observer.observe(el));
-  } else {
-    reveals.forEach(el => el.classList.add('visible'));
-  }
-
-  // ── Stagger grid children ────────────────────────────────
-  document.querySelectorAll('.products-grid, .services-list, .approach-row, .cs-skills-grid, .cs-outcomes-grid, .cs-outcomes-qual').forEach(grid => {
-    grid.querySelectorAll(':scope > *').forEach((child, i) => {
-      child.style.transitionDelay = `${i * 0.07}s`;
-    });
-  });
-
-  // ── Active nav on scroll ─────────────────────────────────
-  const sections = document.querySelectorAll('[data-section]');
-  const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  if (sections.length && navItems.length) {
-    const scrollObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.dataset.section;
-          navItems.forEach(a => {
-            a.style.color = a.getAttribute('href') === `#${id}` ? 'var(--accent)' : '';
-          });
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    sections.forEach(s => scrollObs.observe(s));
-  }
-
-  // ── Nav shadow on scroll ─────────────────────────────────
-  const nav = document.querySelector('nav');
-  if (nav) {
-    window.addEventListener('scroll', () => {
-      nav.style.boxShadow = window.scrollY > 10 ? '0 2px 24px rgba(10,10,15,0.08)' : 'none';
-    }, { passive: true });
-  }
-
-  // ── Year ─────────────────────────────────────────────────
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-})();
-</script>
-
+<script src="js/main.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

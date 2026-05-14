@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Order-to-Delivery Platform — Irshan Khan</title>
+<meta name="description" content="How I led the transformation of a fragmented 8-system enterprise order process into a 70%+ automated, integrated platform — as product manager.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+/* ── CASE STUDY SPECIFIC ───────────────────────── */
+.cs-meta-bar {
+  background: var(--cream); border-bottom: 1px solid var(--border);
+  display: flex; gap: 3rem; padding: 1.4rem var(--pad-x);
+  flex-wrap: wrap;
+}
+.cs-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.cs-meta-label { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.cs-meta-val { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+
+/* Outcomes bar */
+.outcomes-bar {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 1px;
+  background: var(--accent); border: 1px solid var(--accent);
+}
+.outcome-item { background: var(--accent); padding: 2.2rem; text-align: center; transition: background 0.2s; }
+.outcome-item:hover { background: #b83808; }
+.outcome-num { font-family: var(--font-display); font-size: clamp(2.2rem,4vw,3.2rem); font-weight: 300; color: #fff; line-height: 1; }
+.outcome-lbl { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 0.4rem; line-height: 1.5; }
+
+/* Split layouts */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.split-cell { background: var(--paper); padding: 3rem; }
+.split-cell:first-child { border-right: 1px solid var(--border); }
+.split-dark { background: var(--ink); }
+
+/* Process timeline */
+.cs-timeline { position: relative; }
+.cs-timeline::before { content:''; position:absolute; left:120px; top:0; bottom:0; width:1px; background: linear-gradient(to bottom, transparent, var(--accent) 8%, var(--accent) 92%, transparent); }
+.cs-tl-row { display: grid; grid-template-columns: 104px 40px 1fr; align-items:start; padding: 2.8rem 0; border-bottom: 1px solid var(--border); }
+.cs-tl-row:last-child { border-bottom:none; }
+.cs-tl-phase { text-align:right; padding-top:4px; }
+.cs-tl-phase-num { font-family: var(--font-display); font-size: 1.8rem; font-weight:300; color: var(--accent); line-height:1; }
+.cs-tl-phase-lbl { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--muted); }
+.cs-tl-dot { display:flex; justify-content:center; padding-top:8px; position:relative; z-index:2; }
+.cs-tl-dot::before { content:''; width:9px; height:9px; border-radius:50%; background:var(--accent); border:2px solid var(--paper); box-shadow:0 0 0 1px var(--accent); }
+.cs-tl-title { font-family:var(--font-display); font-size:1.25rem; font-style:italic; margin-bottom:0.5rem; }
+.cs-tl-text { font-size:0.9rem; line-height:1.8; color:#4a4844; max-width:580px; margin-bottom:0.9rem; }
+.cs-tl-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+.cs-tl-tag { font-family:var(--font-mono); font-size:0.57rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); background:rgba(200,65,10,0.07); border:1px solid rgba(200,65,10,0.18); padding:0.25rem 0.7rem; }
+
+/* Architecture diagram */
+.arch-wrap { background: var(--ink); border-radius: 2px; padding: 3rem; }
+.arch-sub { font-family:var(--font-mono); font-size:0.58rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent-lt); text-align:center; margin-bottom:2rem; }
+.arch-layers { display:flex; flex-direction:column; gap:0.8rem; }
+.arch-row { display:flex; align-items:stretch; gap:0.6rem; }
+.arch-layer-lbl { writing-mode:vertical-rl; transform:rotate(180deg); font-family:var(--font-mono); font-size:0.52rem; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.22); min-width:20px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.arch-nodes { display:flex; gap:0.5rem; flex:1; }
+.arch-node { flex:1; border:1px solid rgba(255,255,255,0.08); padding:0.9rem 0.7rem; text-align:center; cursor:default; transition:border-color 0.25s, background 0.25s; }
+.arch-node:hover { border-color:var(--accent); background:rgba(200,65,10,0.09); }
+.arch-node.hl { border-color:var(--accent); background:rgba(200,65,10,0.13); }
+.arch-node-name { font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:0.2rem; }
+.arch-node-name.hl { color:var(--accent-lt); }
+.arch-node-desc { font-size:0.62rem; color:rgba(255,255,255,0.27); line-height:1.3; font-family:var(--font-display); }
+.arch-arrow { text-align:center; color:rgba(255,255,255,0.15); font-size:0.75rem; padding:0.1rem 0 0.1rem 22px; }
+
+/* Pain list */
+.pain-list { list-style:none; }
+.pain-list li { font-family:var(--font-mono); font-size:0.63rem; letter-spacing:0.05em; color:var(--muted); padding:0.45rem 0; border-top:1px solid var(--border); display:flex; align-items:flex-start; gap:0.6rem; }
+.pain-list li::before { content:'—'; color:var(--accent); flex-shrink:0; }
+
+/* Qual outcomes */
+.qual-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); }
+.qual-item { background:var(--paper); padding:2rem; transition:background 0.2s; }
+.qual-item:hover { background:#f0ede6; }
+.qual-title { font-family:var(--font-ui); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:0.6rem; }
+.qual-text { font-size:0.9rem; line-height:1.75; color:#4a4844; }
+
+@media (max-width: 768px) {
+  .outcomes-bar { grid-template-columns: repeat(2,1fr); }
+  .split { grid-template-columns:1fr; }
+  .split-cell:first-child { border-right:none; border-bottom:1px solid var(--border); }
+  .cs-timeline::before { left:72px; }
+  .cs-tl-row { grid-template-columns: 60px 32px 1fr; }
+  .cs-tl-phase-num { font-size:1.3rem; }
+  .qual-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body class="page-wrap">
+<nav class="site-nav">
+  <a href="../index.html" class="nav-logo">Irshan<span>.</span></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-menu">
+    <a href="../index.html">Home</a><a href="products.html">Products</a><a href="services.html">Services</a><a href="innovation.html">Innovation</a><a href="casestudy.html" class="active">Case Study</a><a href="about.html">About</a><a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Case Study · Platform Transformation</p>
+    <h1 class="page-hero-title">Order-to-Delivery<br><em>Platform Implementation</em></h1>
+    <p class="page-hero-desc">Led end-to-end product strategy for integrating 8 enterprise systems — transforming a fragmented, manual order process into a fully automated, real-time delivery platform for private wireless and Kubernetes infrastructure orders.</p>
+  </div>
+</div>
+
+<!-- META BAR -->
+<div class="cs-meta-bar">
+  <div class="cs-meta-item"><span class="cs-meta-label">Role</span><span class="cs-meta-val">Product Manager</span></div>
+  <div class="cs-meta-item"><span class="cs-meta-label">Scope</span><span class="cs-meta-val">Programme Lead</span></div>
+  <div class="cs-meta-item"><span class="cs-meta-label">Systems</span><span class="cs-meta-val">8 Integrated</span></div>
+  <div class="cs-meta-item"><span class="cs-meta-label">Delivery</span><span class="cs-meta-val">4 Phases</span></div>
+  <div class="cs-meta-item"><span class="cs-meta-label">Domain</span><span class="cs-meta-val">Telecommunications</span></div>
+  <div class="cs-meta-item"><span class="cs-meta-label">Platform Types</span><span class="cs-meta-val">Private Wireless + Kubernetes</span></div>
+</div>
+
+<!-- OUTCOMES -->
+<div class="section" style="padding-bottom:0;">
+  <div class="sec-head reveal"><span class="sec-num">Results</span><h2 class="sec-title">Key <em>Outcomes</em></h2><div class="sec-rule"></div></div>
+  <div class="outcomes-bar reveal">
+    <div class="outcome-item"><div class="outcome-num">−40%</div><div class="outcome-lbl">Order-to-delivery cycle time (Year 1 target)</div></div>
+    <div class="outcome-item"><div class="outcome-num">70%+</div><div class="outcome-lbl">Standard orders fully automated</div></div>
+    <div class="outcome-item"><div class="outcome-num">+30%</div><div class="outcome-lbl">First-time-right configuration rate</div></div>
+    <div class="outcome-item"><div class="outcome-num">8</div><div class="outcome-lbl">Systems unified on one data model</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="section">
+  <div class="sec-head reveal"><span class="sec-num">01</span><h2 class="sec-title">The <em>Problem</em></h2><div class="sec-rule"></div></div>
+  <div class="split reveal">
+    <div class="split-cell">
+      <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;line-height:1.3;margin-bottom:1.2rem;">Eight isolated systems with no shared data layer</h3>
+      <p class="body-md" style="margin-bottom:1.5rem;">Every system — ERP, offer tool, supply chain, ITSM, delivery tracker, notifications, logistics, and reporting — operated in complete isolation. Every handoff was manual, every status update an email. Configuration errors were discovered at delivery, not at intake.</p>
+      <ul class="pain-list">
+        <li>Manual data entry duplicated across 5+ tools per order</li>
+        <li>Sequential approvals creating 3–5 day bottlenecks</li>
+        <li>CIQ and BoM errors found at delivery, not at intake</li>
+        <li>Order status tracked in spreadsheets and email threads</li>
+        <li>Finance and supply chain engaged too late in the cycle</li>
+        <li>Zero KPIs, SLA tracking, or continuous improvement loop</li>
+        <li>Tribal knowledge with no SOPs or audit trail</li>
+        <li>Subscription contracts created and tracked manually</li>
+      </ul>
+    </div>
+    <div class="split-cell">
+      <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;line-height:1.3;margin-bottom:1.2rem;">My approach: integration-first, automation-driven</h3>
+      <p class="body-md" style="margin-bottom:1.5rem;">Rather than replacing systems, I designed an integration-first strategy — build an API middleware and master data layer connecting all existing tools, then layer automation and workflow governance on top.</p>
+      <ul class="pain-list">
+        <li>Discovery sprint mapping all processes and dependencies before any build</li>
+        <li>Quick-win phase to prove value and build team confidence early</li>
+        <li>Event-driven architecture with shared master data repository</li>
+        <li>Rule-based auto-approval replacing sequential sign-off chains</li>
+        <li>CIQ/BoM engine embedded at offer creation, not delivery</li>
+        <li>Centralised Power BI cockpit as the single visibility layer</li>
+        <li>GIC code mapping to align product categories with financial reporting</li>
+        <li>Phased rollout with measurable KPIs at each milestone gate</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ROLE -->
+<div class="section-full" style="background: var(--ink); padding: var(--pad-sect) var(--pad-x);">
+  <div style="max-width:var(--max-w); margin:0 auto;">
+    <div class="sec-head dark reveal">
+      <span class="sec-num" style="color:var(--accent-lt);">02</span>
+      <h2 class="sec-title" style="color:var(--paper);">My <em style="color:var(--accent-lt);">Role</em></h2>
+      <div class="sec-rule" style="background:var(--border-dark);"></div>
+    </div>
+    <div class="card-grid card-grid-3 reveal" data-stagger>
+      <div class="card card-dark">
+        <div class="label" style="color:var(--accent-lt); margin-bottom:0.8rem;">Product Strategy</div>
+        <p style="font-family:var(--font-display);font-size:1rem;font-style:italic;line-height:1.65;color:rgba(245,243,238,0.8);">Defined the 5-pillar transformation mandate — automation, centralisation, integration, data governance, tooling maturity — and maintained strategic alignment across all phases and stakeholder groups.</p>
+      </div>
+      <div class="card card-dark">
+        <div class="label" style="color:var(--accent-lt); margin-bottom:0.8rem;">Stakeholder Leadership</div>
+        <p style="font-family:var(--font-display);font-size:1rem;font-style:italic;line-height:1.65;color:rgba(245,243,238,0.8);">Primary interface between Sales, Finance, Operations, Delivery Engineering, and Supply Chain. Ran weekly steering cadences, owned the RACI, and resolved cross-functional blockers throughout delivery.</p>
+      </div>
+      <div class="card card-dark">
+        <div class="label" style="color:var(--accent-lt); margin-bottom:0.8rem;">Requirements &amp; System Design</div>
+        <p style="font-family:var(--font-display);font-size:1rem;font-style:italic;line-height:1.65;color:rgba(245,243,238,0.8);">Authored functional requirements, API contracts, data governance policy, and process flows for 8 integrated systems — including ERP, ITSM, private wireless provisioning, and Kubernetes infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARCHITECTURE -->
+<div class="section">
+  <div class="sec-head reveal"><span class="sec-num">03</span><h2 class="sec-title">System <em>Architecture</em></h2><div class="sec-rule"></div></div>
+  <div class="arch-wrap reveal">
+    <div class="arch-sub">Target Platform Architecture — 8 Systems, 1 Integration Layer</div>
+    <div class="arch-layers">
+      <div class="arch-row"><div class="arch-layer-lbl" style="color:var(--accent-lt)">ENTRY</div><div class="arch-nodes"><div class="arch-node hl" style="max-width:260px;margin:0 auto;flex:none;width:100%;"><div class="arch-node-name hl">Order &amp; Offer Tool</div><div class="arch-node-desc">Single entry point for all orders</div></div></div></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-row"><div class="arch-layer-lbl" style="color:var(--accent-lt)">INTEGRATION</div><div class="arch-nodes"><div class="arch-node hl"><div class="arch-node-name hl">API Middleware</div><div class="arch-node-desc">Event bus, routing, auth</div></div><div class="arch-node hl"><div class="arch-node-name hl">Master Data Repo</div><div class="arch-node-desc">Single source of truth</div></div><div class="arch-node hl"><div class="arch-node-name hl">Workflow Engine</div><div class="arch-node-desc">Auto-approval, state machine</div></div></div></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-row"><div class="arch-layer-lbl">CORE</div><div class="arch-nodes"><div class="arch-node"><div class="arch-node-name">ERP (Sales Orders)</div><div class="arch-node-desc">SO, demand, invoicing</div></div><div class="arch-node"><div class="arch-node-name">Supply Chain ERP</div><div class="arch-node-desc">Vendors, stock, export</div></div><div class="arch-node"><div class="arch-node-name">ITSM Platform</div><div class="arch-node-desc">Approvals, tickets</div></div><div class="arch-node"><div class="arch-node-name">Delivery Tracker</div><div class="arch-node-desc">Orders, subscriptions</div></div></div></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-row"><div class="arch-layer-lbl">PROVISION</div><div class="arch-nodes"><div class="arch-node"><div class="arch-node-name">CIQ / BoM Engine</div><div class="arch-node-desc">Config validation, BOM</div></div><div class="arch-node"><div class="arch-node-name">Private Wireless API</div><div class="arch-node-desc">RAN, 5G Core, SIM</div></div><div class="arch-node"><div class="arch-node-name">Kubernetes API</div><div class="arch-node-desc">Cluster, RBAC, addons</div></div></div></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-row"><div class="arch-layer-lbl">OUTPUT</div><div class="arch-nodes"><div class="arch-node"><div class="arch-node-name">Notification Engine</div><div class="arch-node-desc">Customer comms</div></div><div class="arch-node"><div class="arch-node-name">Logistics (3PL)</div><div class="arch-node-desc">Shipment, POD</div></div><div class="arch-node"><div class="arch-node-name">Reporting Cockpit</div><div class="arch-node-desc">Live KPIs, SLAs</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="section" style="padding-top:0; background: var(--cream);">
+  <div style="padding: var(--pad-sect) 0 0;">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">How I <em>Worked</em></h2><div class="sec-rule"></div></div>
+    <div class="cs-timeline reveal">
+
+      <div class="cs-tl-row">
+        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P0</div><div class="cs-tl-phase-lbl">Discovery</div></div>
+        <div class="cs-tl-dot"></div>
+        <div>
+          <div class="cs-tl-title">Stakeholder mapping, process archaeology &amp; backlog formation</div>
+          <p class="cs-tl-text">Ran structured interviews across Sales, Finance, Operations, Delivery, and Supply Chain. Mapped every process step, data flow, and system handoff. Produced a dependency diagram exposing 8 critical blockers — used as the single alignment artefact for all subsequent decisions.</p>
+          <div class="cs-tl-tags"><span class="cs-tl-tag">Stakeholder Interviews</span><span class="cs-tl-tag">Process Mapping</span><span class="cs-tl-tag">Dependency Analysis</span><span class="cs-tl-tag">Backlog Prioritisation</span></div>
+        </div>
+      </div>
+
+      <div class="cs-tl-row">
+        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P1</div><div class="cs-tl-phase-lbl">Foundation</div></div>
+        <div class="cs-tl-dot"></div>
+        <div>
+          <div class="cs-tl-title">Requirements definition, API design &amp; master data governance</div>
+          <p class="cs-tl-text">Authored the master data model, defined system-of-record ownership per domain, and wrote functional API specifications for the integration middleware. Established the GIC code mapping framework aligning product categories with financial reporting.</p>
+          <div class="cs-tl-tags"><span class="cs-tl-tag">API Specification</span><span class="cs-tl-tag">Data Governance</span><span class="cs-tl-tag">Financial Modelling</span><span class="cs-tl-tag">RACI Design</span></div>
+        </div>
+      </div>
+
+      <div class="cs-tl-row">
+        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P2</div><div class="cs-tl-phase-lbl">Automation</div></div>
+        <div class="cs-tl-dot"></div>
+        <div>
+          <div class="cs-tl-title">Workflow engine, CIQ/BoM consolidation &amp; auto-approval rules</div>
+          <p class="cs-tl-text">Translated approval governance into machine-readable rules: standard orders auto-approve instantly; custom orders route to parallel human approval lanes. Eliminated the sequential bottleneck adding 3–5 days to every order cycle.</p>
+          <div class="cs-tl-tags"><span class="cs-tl-tag">Workflow Design</span><span class="cs-tl-tag">Business Rules</span><span class="cs-tl-tag">Configuration Mgmt</span><span class="cs-tl-tag">BoM Automation</span></div>
+        </div>
+      </div>
+
+      <div class="cs-tl-row">
+        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P3</div><div class="cs-tl-phase-lbl">Provisioning</div></div>
+        <div class="cs-tl-dot"></div>
+        <div>
+          <div class="cs-tl-title">Private wireless &amp; Kubernetes platform API integration</div>
+          <p class="cs-tl-text">Defined provisioning contracts for both platform types. Private wireless: RAN configuration, 5G core setup (UPF/AMF/SMF), SIM profile activation. Kubernetes: cluster lifecycle from node allocation to RBAC, addon deployment, and encrypted kubeconfig delivery.</p>
+          <div class="cs-tl-tags"><span class="cs-tl-tag">5G / Private Wireless</span><span class="cs-tl-tag">Kubernetes</span><span class="cs-tl-tag">API Contracts</span><span class="cs-tl-tag">Infrastructure Automation</span></div>
+        </div>
+      </div>
+
+      <div class="cs-tl-row">
+        <div class="cs-tl-phase"><div class="cs-tl-phase-num">P4</div><div class="cs-tl-phase-lbl">Visibility</div></div>
+        <div class="cs-tl-dot"></div>
+        <div>
+          <div class="cs-tl-title">Centralised cockpit, KPI framework &amp; continuous improvement</div>
+          <p class="cs-tl-text">Designed the reporting layer aggregating all 8 systems into one real-time dashboard. Defined the KPI framework — cycle time, first-time-right, automation rate, invoice accuracy — and the governance model for ongoing improvement sprints.</p>
+          <div class="cs-tl-tags"><span class="cs-tl-tag">KPI Design</span><span class="cs-tl-tag">Dashboard Architecture</span><span class="cs-tl-tag">Continuous Improvement</span><span class="cs-tl-tag">Change Management</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- QUALITATIVE OUTCOMES -->
+<div class="section">
+  <div class="sec-head reveal"><span class="sec-num">05</span><h2 class="sec-title">Qualitative <em>Impact</em></h2><div class="sec-rule"></div></div>
+  <div class="qual-grid reveal">
+    <div class="qual-item">
+      <div class="qual-title">Parallel Approvals Replaced Sequential Bottleneck</div>
+      <p class="qual-text">Multi-day chains redesigned into parallel, rule-gated workflows. Standard orders auto-approve in seconds; complex orders run concurrent approval tracks with no unnecessary waiting.</p>
+    </div>
+    <div class="qual-item">
+      <div class="qual-title">Single Source of Truth Across All Teams</div>
+      <p class="qual-text">Replaced 8 disconnected data stores with a master data repository. Every system consumes from one canonical record — eliminating conflicts and the tribal knowledge that slowed onboarding.</p>
+    </div>
+    <div class="qual-item">
+      <div class="qual-title">Finance &amp; Supply Chain Integrated Upstream</div>
+      <p class="qual-text">Moved credit validation and supply chain readiness to offer creation — not delivery. Finance and procurement now have real-time data at the point of commitment.</p>
+    </div>
+    <div class="qual-item">
+      <div class="qual-title">Real-Time Operational Visibility</div>
+      <p class="qual-text">Replaced spreadsheet-tracked order status with a live cockpit delivering KPIs, SLA adherence, delivery capacity, and invoice accuracy to all stakeholder groups simultaneously.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS DEMONSTRATED -->
+<div class="section" style="padding-top:0;">
+  <div class="sec-head reveal"><span class="sec-num">06</span><h2 class="sec-title">Skills <em>Demonstrated</em></h2><div class="sec-rule"></div></div>
+  <div class="card-grid card-grid-3 reveal" data-stagger>
+    <div class="card card-accent-bar"><div class="label" style="margin-bottom:0.7rem;">Product Strategy</div><p class="body-sm">Transformation mandate, KPI framework, phased roadmap. Balanced short-term quick wins against long-term architectural investment.</p><div class="tags" style="margin-top:1rem;"><span class="tag">Roadmapping</span><span class="tag">OKRs</span></div></div>
+    <div class="card card-accent-bar"><div class="label" style="margin-bottom:0.7rem;">Stakeholder Management</div><p class="body-sm">Competing priorities across 5 functions. Steering committees, RACI ownership, organisational navigation across a multi-phase programme.</p><div class="tags" style="margin-top:1rem;"><span class="tag">Cross-functional</span><span class="tag">RACI</span></div></div>
+    <div class="card card-accent-bar"><div class="label" style="margin-bottom:0.7rem;">Requirements Engineering</div><p class="body-sm">Functional specs, API contracts, data governance policies, and workflow definitions — translated from ambiguous business needs into developer-ready specifications.</p><div class="tags" style="margin-top:1rem;"><span class="tag">API Spec</span><span class="tag">User Stories</span></div></div>
+    <div class="card card-accent-bar"><div class="label" style="margin-bottom:0.7rem;">Systems Thinking</div><p class="body-sm">End-to-end architecture: integration middleware, master data model, event-driven workflows, provisioning APIs for private wireless and Kubernetes.</p><div class="tags" style="margin-top:1rem;"><span class="tag">Architecture</span><span class="tag">Data Modelling</span></div></div>
+    <div class="card card-accent-bar"><div class="label" style="margin-bottom:0.7rem;">Technical Domain Depth</div><p class="body-sm">5G/LTE networks (RAN, core, SIM), Kubernetes cluster lifecycle, ERP integration, enterprise supply chain — sufficient to write API contracts and challenge trade-offs.</p><div class="tags" style="margin-top:1rem;"><span class="tag">5G</span><span class="tag">Kubernetes</span></div></div>
+    <div class="card card-accent-bar"><div class="label" style="margin-bottom:0.7rem;">Data-Driven Delivery</div><p class="body-sm">KPI framework designed from scratch: cycle time, first-time-right, automation rate, invoice accuracy. Reporting cockpit architecture and governance model.</p><div class="tags" style="margin-top:1rem;"><span class="tag">KPI Design</span><span class="tag">Analytics</span></div></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div><div class="footer-name">Irshan<br><em>Khan</em></div><p class="footer-bio">Product leader driving enterprise platform transformation across private wireless and cloud-native infrastructure.</p></div>
+  <div>
+    <div class="footer-col-label">Navigate</div>
+    <ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="services.html">Services</a></li><li><a href="innovation.html">Innovation</a></li><li><a href="about.html">About</a></li></ul>
+    <div class="footer-col-label">Connect</div>
+    <ul class="footer-links"><li><a href="https://irshankhan.wordpress.com" target="_blank" rel="noopener">Portfolio Blog</a></li><li><a href="http://www.linkedin.com/in/irshankhan" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">&copy; <span id="footer-year"></span> Irshan Khan</span><span class="footer-copy">irshankhan.github.io</span></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
